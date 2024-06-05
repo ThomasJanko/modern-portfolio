@@ -53,9 +53,9 @@
       title: "Currently building an AI SaaS app with a payments system.",
       description: "The Inside Scoop",
       className: "md:col-span-3 md:row-span-2",
-      imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
+      imgClassName: "absolute right-0 bottom-0 md:w-96 w-60 opacity-85 rounded-md",
       titleClassName: "justify-center md:justify-start lg:justify-center",
-      img: "/b5.svg",
+      img: "/coding.png",
       spareImg: "/grid.svg",
     },
     {
@@ -73,35 +73,39 @@
   export const projects = [
     {
       id: 1,
-      title: "3D Solar System Planets to Explore",
-      des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-      img: "/p1.svg",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-      link: "https://github.com/adrianhajdin?tab=repositories",
+      title: "SmoldAI - AI SasS",
+      des: "Application integrating multiple Artificial Intelligences. Capability to generate text, code, images, music, and videos. Connect with OAuth, Stripe payment processing, user management, order management, and subscription management...",
+      img: "/images/smoldAi.png",
+      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/mongo.webp", "/stripe.jpeg"],
+      link: "https://github.com/orgs/zkerkeb-class/teams/kouci-thomas-et-leo/repositories",
+      demo: "https://smold-ai.thomas-jan.fr",
     },
     {
       id: 2,
-      title: "Yoom - Video Conferencing App",
-      des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-      img: "/p2.svg",
-      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-      link: "https://github.com/adrianhajdin/zoom-clone",
+      title: "Spotify Clone - Music Player",
+      des: "Reproduction of the Spotify streaming site. Music upload via AWS S3, music converter to mp3, playlist creation, adding music to a playlist, music playback, music search, simultaneous listening via sockets...",
+      img: "/images/spotify.png",
+      iconLists: ["/next.svg", "/tail.svg", "/mongo.webp", "/socket.svg", "/aws.svg"],
+      link: "https://github.com/orgs/Dev-Cloud-Spotify/repositories",
+      demo: "https://spotify-front-end.thomas-jan.fr",
     },
     {
       id: 3,
-      title: "AI Image SaaS - Canva Application",
-      des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-      img: "/p3.svg",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-      link: "https://github.com/adrianhajdin/ai_saas_app",
+      title: "Imaginify - AI Image SaaS",
+      des: "Images design using AI features and a payments and credits system using the latest tech stack.",
+      img: "/images/imaginify.png",
+      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/clerk.svg", "/stripe.jpeg"],
+      link: "https://github.com/ThomasJanko/imaginify",
+      demo: "https://imaginify.thomas-jan.fr",
     },
     {
       id: 4,
-      title: "Animated Apple Iphone 3D Website",
-      des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-      img: "/p4.svg",
-      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-      link: "https://github.com/adrianhajdin/iphone",
+      title: "Crypto-app - Blockchain Application",
+      des: "Cryptocurrency transfer application. Allows account creation, authentication, balance viewing, money transfers, transaction history viewing, and sending messages within a transaction...",
+      img: "/images/crypto-app.png",
+      iconLists: ["/react.svg", "/tail.svg", "/eth.svg", "/metamask.svg", "/hardhat.svg"],
+      link: "https://github.com/ThomasJanko-Blockchain/crypto-wallet",
+      demo: "https://crypto-app.thomas-jan.fr",
     },
   ];
   
@@ -240,3 +244,64 @@
       colors: [[0, 255, 255]],
     },
   ];
+
+  export const technologies = [
+    {
+      title: "Programming Languages",
+      icon: "/code.svg",
+      items: [
+        { name: "HTML", icon: "/html.svg", link: "https://html.spec.whatwg.org"},
+        { name: "CSS", icon: "/css.svg", link: "https://www.w3.org/Style/CSS/Overview.en.html"},
+        { name: "JavaScript", icon: "/js.svg", link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"},
+        { name: "TypeScript", icon: "/ts.svg", link: "https://www.typescriptlang.org"},
+        { name: "Python", icon: "/python.svg", link: "https://www.python.org"},
+      ]
+    },
+    {
+      title: "Frameworks",
+      icon: "/frameworks.webp",
+      items: [
+        { name: "NextJs", icon: "/next.svg", link: "https://nextjs.org"},
+        { name: "ReactJs", icon: "/react.svg", link: "https://reactjs.org"},
+        { name: "React Native", icon: "/react-native.webp", link: "https://reactnative.dev"},
+        { name: "TailwindCSS", icon: "/tailwindcss.svg", link: "https://tailwindcss.com"},
+        { name: "Redux", icon: "/redux.svg", link: "https://redux.js.org"},
+        { name: "VueJs", icon: "/vue.svg", link: "https://vuejs.org"},
+        { name: "Vuetify", icon: "/vuetify.svg", link: "https://vuetifyjs.com"},
+        { name: "Laravel", icon: "/laravel.svg", link: "https://laravel.com"},
+        { name: "Vite", icon: "/vite.svg", link: "https://vitejs.dev"},
+        { name: "ThreeJs", icon: "/three.svg", link: "https://threejs.org"},
+        { name: "Spline", icon: "/spline.webp", link: "https://spline.design"},
+
+      ]
+    },
+    {
+      title: "Libraries",
+      icon: "/libraries.png",
+      items: [
+        { name: "Shadcn-UI", icon: "/shadcn.png", link: "https://ui.shadcn.com/"},
+        { name: "Aceternity-UI", icon: "/aceternity.webp", link: "https://ui.aceternity.com/"},
+        { name: "Material-UI", icon: "/material.svg", link: "https://material-ui.com"},
+        { name: "Framer Motion", icon: "/fm.svg", link: "https://www.framer.com/motion"},
+        { name: "SASS", icon: "/sass.svg", link: "https://sass-lang.com"},
+        { name: "Clerk", icon: "/clerk.svg", link: "https://clerk.dev"},
+        { name: "Stripe", icon: "/stripe.jpeg", link: "https://stripe.com"},
+      ]
+    },
+    {
+      title: "Tools",
+      icon: "/tools.png",
+      items: [
+        { name: "Github", icon: "/git.svg", link: "https://github.com"},
+        { name: "Gitlab", icon: "/gitlab.svg", link: "https://gitlab.com"},
+        { name: "Docker", icon: "/dock.svg", link: "https://www.docker.com"},
+        { name: "Notion", icon: "/notion.svg", link: "https://www.notion.so"},
+        { name: "Figma", icon: "/figma.svg", link: "https://www.figma.com"},
+        { name: "VSCode", icon: "/vscode.svg", link: "https://code.visualstudio.com"},
+        { name: "Postman", icon: "/postman.svg", link: "https://www.postman.com"},
+        { name: "ChatGPT", icon: "/chatGPT.svg", link: "https://chatgpt.com"},
+        { name: "MongoDB", icon: "/mongo.webp", link: "https://www.mongodb.com"},
+        { name: "Ganache", icon: "/ganache.svg", link: "https://www.trufflesuite.com/ganache"},
+      ]
+    }
+  ]
