@@ -144,7 +144,8 @@ export const BentoGridItem = ({
               {/* tech stack lists */}
               <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
                 {leftLists.map((item, i) => (
-                  <img 
+                  <img
+                    key={item.name}
                     src={item.img} 
                     alt={item.img}
                     className="w-10 h-10 lg:w-16 lg:h-16 rounded-full bg-[#10132E]" 
@@ -162,7 +163,8 @@ export const BentoGridItem = ({
               <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
                 <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
                 {rightLists.map((item, i) => (
-                  <img 
+                  <img
+                    key={item.name}
                     src={item.img} 
                     alt={item.img}
                     className="w-10 h-10 lg:w-16 lg:h-16 rounded-full bg-[#10132E]"

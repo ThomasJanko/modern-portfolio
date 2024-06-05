@@ -1,7 +1,7 @@
   export const navItems = [
     { name: "About", link: "#about" },
     { name: "Projects", link: "#projects" },
-    { name: "Testimonials", link: "#testimonials" },
+    { name: "Experiences", link: "#experiences" },
     { name: "Contact", link: "#contact" },
   ];
 
@@ -205,6 +205,88 @@
       thumbnail: "/exp4.svg",
     },
   ];
+
+  export const experiences = [
+    {
+        title: "Vue JS Developer",
+        company_name: "Gestimum",
+        icon: '/gestimum.png',
+        iconBg: "#E6DEDD",
+        date: "April 2021 - July 2021",
+        points: [
+            "Internship for DUT, first internship in web development.",
+            "Two-week self-training on Vue JS, Vuetify, and Laravel.",
+            "Collaborated with a backend developer intern to create a web platform to replace the company's training organization process.",
+            "Participated in the project creation (mockup, database, etc.).",
+        ],
+    },
+
+    {
+        title: "React JS Developer",
+        company_name: "Sportizer",
+        icon: "/sportizer_logo.svg",
+        iconBg: "#383E56",
+        date: "October 2021 - June 2022",
+        points: [
+            "Ydays project (school) in a startup with 3 people.",
+            "Collaborated with 3 teams of 4-5 people (marketing, 3D design, and IT).",
+            "Designed a dynamic and ergonomic basketball scoreboard application to replace old scoreboards in gyms.",
+            "Created a 'remote' interface and a 'screen' interface to control all match variables.",
+            "Used a socket.io server to minimize transmission delay between the remote and display.",
+            "See PDF ->",
+        ],
+        pdf: ''
+    },
+
+    {
+        title: "Fullstack Developer",
+        company_name: "Gestimum",
+        icon: "/gestimum.png",
+        iconBg: "#E6DEDD",
+        date: "April 2022 - July 2022",
+        points: [
+            "Resumed development of the G-Formation platform.",
+            "Collaborated with 2 new interns.",
+            "Implemented automatic emails (Mailtrap) and began launching tests within the company.",
+            "Set up a server to host the first internal production version of the platform.",
+        ],
+    },
+
+    {
+        title: "Frontend Developer",
+        company_name: "Revochat",
+        icon: "/revochat.png",
+        iconBg: "#E6DEDD",
+        date: "October 2022 - May 2023",
+        points: [
+            "Developed a Web3 instant messaging application in React JS.",
+            "Ydays project (school) with a team of 7 developers.",
+            "Used Web3.0 technology to create one of the first chat applications on the Blockchain, ensuring its immutability.",
+            "Deployed the application using Smart Contracts.",
+        ],
+    },
+
+    {
+        title: "Fullstack Developer",
+        company_name: "Gestimum",
+        icon: "/gestimum.png",
+        iconBg: "#383E56",
+        date: "September 2022 - September 2024",
+        points: [
+            "Resumed development of the G-Formation platform with the same interns.",
+            "Implemented an SMTP server to send emails to clients.",
+            "Tested the platform with all company services to identify potential issues and familiarize them with the platform.",
+            "Set up a task scheduler with Laravel for automatic execution of certain site features.",
+            "Opened the platform externally to organize real training sessions with Gestimum clients and partners.",
+            "Created a pre-production site to continue testing and adding new features.",
+            "Updated and maintained the G-Formation platform.",
+            "Developed an internal ticket management application (G-Tickets) with integrations (Teams / Graph API) to facilitate and speed up internal processing.",
+            "Redesigned the Gestimum private space (Client area) with new technologies (Vue.js / Express.js) and deployed the new version.",
+            "Developed an API to interface between Gestimum and an external company (Kaze) to facilitate technical interventions for Gestimum clients.",
+            "Deployed the private space, G-Ticket, and the interfacing API with Docker on an Ubuntu server.",
+        ],
+    },
+];
   
   export const socialMedia = [
     {
