@@ -75,7 +75,7 @@
       id: 1,
       title: "SmoldAI - AI SasS",
       des: "Application integrating multiple Artificial Intelligences. Capability to generate text, code, images, music, and videos. Connect with OAuth, Stripe payment processing, user management, order management, and subscription management...",
-      img: "/images/smoldAi.png",
+      img: "/images/smoldAI.png",
       iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/mongo.webp", "/stripe.jpeg"],
       link: "https://github.com/orgs/zkerkeb-class/teams/kouci-thomas-et-leo/repositories",
       demo: "https://smold-ai.thomas-jan.fr",
@@ -381,7 +381,7 @@
         { name: "Figma", icon: "/figma.svg", link: "https://www.figma.com"},
         { name: "VSCode", icon: "/vscode.svg", link: "https://code.visualstudio.com"},
         { name: "Postman", icon: "/postman.svg", link: "https://www.postman.com"},
-        { name: "ChatGPT", icon: "/chatGPT.svg", link: "https://chatgpt.com"},
+        { name: "ChatGPT", icon: "/chatgpt.svg", link: "https://chatgpt.com"},
         { name: "MongoDB", icon: "/mongo.webp", link: "https://www.mongodb.com"},
         { name: "Ganache", icon: "/ganache.svg", link: "https://www.trufflesuite.com/ganache"},
       ]
