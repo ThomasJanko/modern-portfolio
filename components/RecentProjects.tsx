@@ -1,6 +1,5 @@
 import { projects } from '@/data'
 import React from 'react'
-import { div } from 'three/examples/jsm/nodes/Nodes.js'
 import { PinContainer } from './ui/3d-pin'
 import { FaLocationArrow } from 'react-icons/fa6'
 
@@ -20,7 +19,6 @@ const RecentProjects = () => {
                   <img 
                     src="/bg.png"
                     alt="bg-img" 
-                    className='' 
                   />
                 </div>
                 <img 

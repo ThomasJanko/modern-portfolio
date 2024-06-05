@@ -1,4 +1,4 @@
-export const navItems = [
+  export const navItems = [
     { name: "About", link: "#about" },
     { name: "Projects", link: "#projects" },
     { name: "Testimonials", link: "#testimonials" },
@@ -214,5 +214,29 @@ export const navItems = [
     {
       id: 3,
       img: "/link.svg",
+    },
+  ];
+
+  export const approachs = [
+    {
+      id: 1,
+      title: "Planning & Strategy",
+      description: "One of the most important phases of the project is the planning and strategy phase. This is where we define the project scope, objectives, and requirements.",
+      background: "bg-emerald-900",
+      colors: [[0, 255, 255]],
+    },
+    {
+      id: 2,
+      title: "Design & Development",
+      description: "Once the planning and strategy phase is complete, we move on to the design and development phase. This is where we create the visual design and develop the project.",
+      background: "bg-red-700",
+      colors: [[7, 229, 251 ]],
+    },
+    {
+      id: 3,
+      title: "Testing & Deployment",
+      description: "After the design and development phase is complete, we move on to the testing and deployment phase. This is where we test the project to ensure it meets the requirements and deploy it to the live environment.",
+      background: "bg-sky-600",
+      colors: [[0, 255, 255]],
     },
   ];
