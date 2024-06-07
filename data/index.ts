@@ -107,6 +107,74 @@
       link: "https://github.com/ThomasJanko-Blockchain/crypto-wallet",
       demo: "https://crypto-app.thomas-jan.fr",
     },
+    {
+      id: 5,
+      title: "G-Formation - Training Platform",
+      des: "Implementation of an interconnected web interface with the aim of offering training relating to the GESTIMUM ERP.",
+      img: "/images/g-formation.png",
+      iconLists: ["/vue.svg", "/laravel.svg", "/mysql.svg", "vuetify.svg", "/dock.svg"],
+      link: "",
+      demo: "https://g-formation.gestimum.com",
+    },
+    {
+      id: 6,
+      title: "Revochat - Chat App",
+      des: "Developed a Secure App Chat appllication, similar to discord.",
+      img: "/images/revochat.png",
+      iconLists: ["/next.svg", "/react.svg", "/tail.svg", "/mongo.webp", "socket.svg", "/dock.svg"],
+      link: "https://github.com/Revochat",
+      demo: "https://github.com/Revochat",
+    },
+    
+    {
+      id: 7,
+      title: "AirBnb clone - Booking Platform",
+      des: "Airbnb clone. Allows users to create an account, search for accommodation, book accommodation, view booking history, and manage their account...",
+      img: "/images/airbnb.png",
+      iconLists: ["/next.svg", "/react.svg", "/tail.svg", "/mongo.webp"],
+      link: "https://github.com/ThomasJanko/airbnb-clone",
+      demo: "https://airbnb.thomas-jan.fr",
+    },
+    {
+      id: 8,
+      title: "Netflix clone - Streaming Platform",
+      des: "Reproduction of the Netflix streaming site. Use of Next.js and the opensource themoviedb api. Creation of an authentication page and movie retrieval services...",
+      img: "/images/netflix.png",
+      iconLists: ["/next.svg", "/react.svg", "/sass.svg", "/mongo.webp"],
+      link: "https://github.com/ThomasJanko/Netflix/tree/master",
+      demo: "https://g-formation.gestimum.com",
+    },
+    {
+      id: 9,
+      title: "Sportizer - Basketball Scoreboard",
+      des: "Dynamic and ergonomic basketball scoreboard application to replace old scoreboards in gyms. Created a 'remote' interface and a 'screen' interface to control all match variables...",
+      img: "/images/sportizer.png",
+      iconLists: ["/react.svg", "/socket.svg", "/tail.svg", "/react-native.webp", "/figma.svg"],
+      link: "",
+      demo: "",
+    },
+    
+  ];
+
+  export const reactNativeProjects = [
+    {
+      id: 1,
+      title: "Instagram Clone - Social Media",
+      des: "Reproduction of the Instagram social network. Allows users to create an account, post photos, view photos, and manage their account...",
+      img: ["/images/insta-native_1.jpg", "/images/insta-native_2.jpg"],
+      iconLists: ["/react-native.webp", "expo.svg", "/redux.svg", "firebase.svg"],
+      link: "https://github.com/ThomasJanko/InstaReactNative",
+      demo: "",
+    },
+    {
+      id: 2,
+      title: "NFT Marketplace - Blockchain",
+      des: "NFT Marketplace. Allows users to see NFTs, and place bids on them.",
+      img: ["/images/react-native-nft_1.jpg", "/images/react-native-nft_2.jpg"],
+      iconLists: ["/react-native.webp", "expo.svg", "eth.svg", "metamask.svg"],
+      link: "",
+      demo: "",
+    },
   ];
   
   export const testimonials = [
