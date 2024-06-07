@@ -302,7 +302,7 @@
     {
       id: 3,
       img: "/link.svg",
-      link: "www.linkedin.com/in/thomas-jankowski-b3483a216"
+      link: "https://linkedin.com/in/thomas-jankowski-b3483a216"
     },
   ];
 
