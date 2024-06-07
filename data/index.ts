@@ -292,14 +292,17 @@
     {
       id: 1,
       img: "/git.svg",
+      link: "https://github.com/ThomasJanko"
     },
     {
       id: 2,
-      img: "/twit.svg",
+      img: "/insta.svg",
+      link: "https://www.instagram.com/thomasj78125"
     },
     {
       id: 3,
       img: "/link.svg",
+      link: "www.linkedin.com/in/thomas-jankowski-b3483a216"
     },
   ];
 
