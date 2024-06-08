@@ -1,6 +1,7 @@
 import React from 'react'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import { experiences } from '@/data';
+import { TracingBeam } from './ui/TracingBeam';
 // import 'react-vertical-timeline-component/style.min.css'
 
 const Experiences = () => {
@@ -11,6 +12,7 @@ const Experiences = () => {
         My <span className='text-purple'>work experiences</span>
       </h1>
       <div>
+      <TracingBeam className="px-6">
         <div className='mt-20 flex flex-col'>
           <VerticalTimeline>
             {experiences.map((experience) => (
@@ -18,6 +20,7 @@ const Experiences = () => {
             ))}
           </VerticalTimeline>
         </div>
+      </TracingBeam>
       </div>
     </div>
   );

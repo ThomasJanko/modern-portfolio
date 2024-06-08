@@ -73,7 +73,7 @@ const RecentProjects = () => {
                   {iconLists.map((icon, index) => (
                     <div 
                       key={icon} 
-                      className='border border-white/[0.2] rounded-full bg-black lg:w-10 lg:h-10 sm:w-8 sm:h-8 w-8 h-8 flex justify-center items-center'
+                      className='border border-white/[0.2] rounded-full bg-black lg:w-10 lg:h-10 sm:w-10 sm:h-10 w-10 h-10 flex justify-center items-center'
                       style={{transform: `translateX(-${5 * index * 2}px)`}}
                     >
                       <img 
@@ -101,21 +101,55 @@ const RecentProjects = () => {
 
         <h1 className='heading mt-6'>
             And some {' '}
-            <span className='text-purple'>React Native</span>
+            <span className='text-purple'>Mobil App</span>
         </h1>
 
-        <div className='flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-20 mt-10'>
+        <div className='relative flex flex-wrap dark:bg-black-100 bg-grid-black/[0.2] dark:bg-grid-white/[0.03] bg-opacity-10 bg-white items-center justify-center p-4 gap-x-24 gap-y-20 mt-10'>
         {reactNativeProjects.map(({id, title, des, link, img, iconLists, demo}) => (
           <div key={id} className='flex flex-col items-center justify-center'>
-            <span className='font-bold text-xl'> {title} </span>
-            <div className='flex flex-wrap justify-center gap-x-20 gap-y-8 mt-6'>
+            <span className='font-bold text-xl sm:text-2xl text-center'> {title} </span>
+            <div className='flex flex-wrap justify-center gap-x-20 gap-y-8 mt-10'>
             {img.map((image, index) => (
-              <Tilt key={index} className='flex rounded-xl w-[300px] h-auto'>
+              <Tilt key={index} className='relative flex flex-col rounded-xl w-[300px] h-auto'>
+                <div className='w-full h-full relative'>
+                <img
+                  src='https://imgs.search.brave.com/aUFvZvEvh63QpAy0tnaWIhXFjf-6AVqHyhSbHTeHZIc/rs:fit:860:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy8z/LzM0L0lQaG9uZV8x/Ml9CbHVlLnN2Zw.svg'
+                  alt='bg-img'
+                  className='w-full h-full object-center rounded-3xl'
+                  style={{
+                    transform: `rotate(${index % 2 === 0 ? -3 : 3}deg)`,
+                    zIndex: 10 - index
+                  }}
+                />
                 <img 
                   src={image}
                   alt={title}
-                  className='w-full h-full object-center rounded-xl'
+                  className='w-[90%] h-[96%] absolute left-4 top-3 object-center rounded-3xl'
+                  style={{
+                    transform: `rotate(${index % 2 === 0 ? -3 : 3}deg)`,
+                    borderRadius: '36px',
+                    zIndex: 10 - index
+                  }}
                 />
+                </div>
+                <div className={`flex justify-center mt-4 items-center ${index % 2 === 0? 'ml-14' : 'mr-6'}`}
+                style={{
+                  transform: `rotate(${index % 2 === 0 ? -3 : 3}deg)`,
+                }}>
+                  {iconLists.map((icon, index) => (
+                    <div 
+                      key={icon} 
+                      className='border border-white/[0.2] rounded-full bg-black lg:w-10 lg:h-10 sm:w-10 sm:h-10 w-10 h-10 flex justify-center items-center'
+                      style={{transform: `translateX(-${5 * index * 2}px)`}}
+                    >
+                      <img 
+                        src={icon} 
+                        alt={icon} 
+                        className='p-2' 
+                      />
+                    </div>
+                  ))}
+                </div>
               </Tilt>
             ))}
             </div>

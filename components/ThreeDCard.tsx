@@ -61,7 +61,7 @@ export function ThreeDCard({ title, description, link, img, iconLists, demo }: T
                   {iconLists.map((icon, index) => (
                     <div 
                       key={icon} 
-                      className='border border-white/[0.2] rounded-full bg-black lg:w-10 lg:h-10 sm:w-8 sm:h-8 w-8 h-8 flex justify-center items-center'
+                      className='border border-white/[0.2] rounded-full bg-black lg:w-10 lg:h-10 sm:w-10 sm:h-10 w-10 h-10 flex justify-center items-center'
                       style={{transform: `translateX(-${5 * index * 2}px)`}}
                     >
                       <img 
