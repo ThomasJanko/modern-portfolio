@@ -57,7 +57,7 @@ export function ThreeDCard({ title, description, link, img, iconLists, demo }: T
             as="button"
             className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
           >
-           <div className='flex items-center justify-between mt-7 mb-3'>
+           <div className='flex items-center justify-between'>
                 <div className='flex items-center'>
                 <AnimatedTooltip items={iconLists} />
                   {/* {iconLists.map((icon, index) => (
@@ -90,7 +90,7 @@ export function ThreeDCard({ title, description, link, img, iconLists, demo }: T
                     height={40}
                     onClick={() => window.open(link, '_blank')}
                   />
-                </div>
+              </div>
           </CardItem>
         </div>
         
