@@ -7,6 +7,7 @@ import { ThreeDCard } from './ThreeDCard'
 import { Meteors } from './ui/Meteor'
 import { Tilt } from 'react-tilt'
 import { AnimatedTooltip } from './ui/AnimatedTooltip'
+import { BackgroundBeams } from './ui/BackgroundBeam'
 
 const RecentProjects = () => {
 
@@ -56,13 +57,13 @@ const RecentProjects = () => {
           <div key={id} className='sm:h-[41rem] lg:min-h-[32.5rem] h-[32rem] flex items-center justify-center sm:w-[570px] w-[80vw]'>
             <PinContainer title={demo} href={demo}>
               <div className='relative flex items-center justify-center sm:w-[570px] sm:h-[40vh] w-[80vw] overflow-hidden h-[30vh] mb-10' onClick={() => window.open(demo, '_blank')}>
-                <div className='relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162D]'>
+                <div className='relative w-full h-full overflow-hidden lg:rounded-3xl'>
                   <img 
                     src="/bg.png"
                     alt="bg-img"
                   />
                 </div>
-                <img 
+                <img
                   src={img}
                   alt={title}
                   className='z-40 absolute bottom-0 w-5/6 h-5/6 object-center rounded-lg rotate-3 translate-y-4'
@@ -73,19 +74,6 @@ const RecentProjects = () => {
               <div className='flex items-center justify-between mt-7 mb-3'>
                 <div className='flex items-center'>
                 <AnimatedTooltip items={iconLists} />
-                  {/* {iconLists.map((icon, index) => (
-                    <div 
-                      key={icon.name} 
-                      className='border border-white/[0.2] rounded-full bg-black lg:w-10 lg:h-10 sm:w-10 sm:h-10 w-10 h-10 flex justify-center items-center'
-                      style={{transform: `translateX(-${5 * index * 2}px)`}}
-                    >
-                      <img 
-                        src={icon.icon} 
-                        alt={icon.icon} 
-                        className='p-2' 
-                      />
-                    </div>
-                  ))} */}
                 </div>
                 <div className='flex justify-center items-center pr-4'>
                   <Image
@@ -96,6 +84,7 @@ const RecentProjects = () => {
                     onClick={() => window.open(link, '_blank')}
                   />
                 </div>
+                <BackgroundBeams />
               </div>
             </PinContainer>
           </div>
@@ -138,19 +127,6 @@ const RecentProjects = () => {
                   transform: `rotate(${index % 2 === 0 ? -3 : 3}deg)`,
                 }}>
                    <AnimatedTooltip items={iconLists} />
-                  {/* {iconLists.map((icon, index) => (
-                    <div 
-                      key={icon} 
-                      className='border border-white/[0.2] rounded-full bg-black lg:w-10 lg:h-10 sm:w-10 sm:h-10 w-10 h-10 flex justify-center items-center'
-                      style={{transform: `translateX(-${5 * index * 2}px)`}}
-                    >
-                      <img 
-                        src={icon} 
-                        alt={icon} 
-                        className='p-2' 
-                      />
-                    </div>
-                  ))} */}
                 </div>
               </Tilt>
             ))}
