@@ -18,7 +18,7 @@ interface ThreeDCardProps {
 export function ThreeDCard({ title, description, link, img, iconLists, demo }: ThreeDCardProps) {
   return (
     <CardContainer className="inter-var">
-      <CardBody className="sm:w-[570px] flex flex-col justify-between sm:h-[40rem] w-[80vw]  h-[30rem]  group/card dark:hover:shadow-2xl bg-[#13162D] dark:hover:shadow-emerald-500/[0.1] dark:border-white/[0.2] border-black/[0.1] rounded-xl p-4 border  ">
+      <CardBody className="sm:w-[570px] flex flex-col justify-between h-full sm:h-[40rem] w-[80vw]  group/card dark:hover:shadow-2xl bg-[#13162D] dark:hover:shadow-emerald-500/[0.1] dark:border-white/[0.2] border-black/[0.1] rounded-xl p-4 border  ">
         <div>
         <CardItem
           translateZ="100"
@@ -45,7 +45,7 @@ export function ThreeDCard({ title, description, link, img, iconLists, demo }: T
         <CardItem
           as="p"
           translateZ="60"
-          className="text-neutral-500 text-base max-w-sm mt-3 dark:text-neutral-300 line-clamp-4"
+          className="text-neutral-500 text-base max-w-sm mt-3 dark:text-neutral-300 line-clamp-2 sm:line-clamp-4"
         >
           {description}
         </CardItem>
