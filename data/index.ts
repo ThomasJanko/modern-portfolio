@@ -1,6 +1,7 @@
   export const navItems = [
     { name: "About", link: "#about" },
     { name: "Projects", link: "#projects" },
+    { name: "Technologies", link: "#technologies" },
     { name: "Experiences", link: "#experiences" },
     { name: "Contact", link: "#contact" },
   ];
