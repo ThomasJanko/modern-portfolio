@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { ThreeDCard } from './ThreeDCard'
 import { Meteors } from './ui/Meteor'
 import { Tilt } from 'react-tilt'
+import { AnimatedTooltip } from './ui/AnimatedTooltip'
 
 const RecentProjects = () => {
 
@@ -16,6 +17,7 @@ const RecentProjects = () => {
       "before:from-[#f64e60]",
       "before:from-[#4e67eb]",
       "before:from-[#1bc6b4]",
+      "before:from-[#f472b6]",
     ]
     return colors[Math.floor(Math.random() * colors.length)]
   }
@@ -70,19 +72,20 @@ const RecentProjects = () => {
               <p className='lg:text-xl lg:font-normal font-light text-sm line-clamp-2 mt-2'> {des} </p>
               <div className='flex items-center justify-between mt-7 mb-3'>
                 <div className='flex items-center'>
-                  {iconLists.map((icon, index) => (
+                <AnimatedTooltip items={iconLists} />
+                  {/* {iconLists.map((icon, index) => (
                     <div 
-                      key={icon} 
+                      key={icon.name} 
                       className='border border-white/[0.2] rounded-full bg-black lg:w-10 lg:h-10 sm:w-10 sm:h-10 w-10 h-10 flex justify-center items-center'
                       style={{transform: `translateX(-${5 * index * 2}px)`}}
                     >
                       <img 
-                        src={icon} 
-                        alt={icon} 
+                        src={icon.icon} 
+                        alt={icon.icon} 
                         className='p-2' 
                       />
                     </div>
-                  ))}
+                  ))} */}
                 </div>
                 <div className='flex justify-center items-center pr-4'>
                   <Image
@@ -108,7 +111,7 @@ const RecentProjects = () => {
         {reactNativeProjects.map(({id, title, des, link, img, iconLists, demo}) => (
           <div key={id} className='flex flex-col items-center justify-center'>
             <span className='font-bold text-xl sm:text-2xl text-center'> {title} </span>
-            <div className='flex flex-wrap justify-center gap-x-20 gap-y-8 mt-10'>
+            <div className='flex flex-wrap justify-center gap-x-20 gap-y-20 mt-10'>
             {img.map((image, index) => (
               <Tilt key={index} className='relative flex flex-col rounded-xl w-[300px] h-auto'>
                 <div className='w-full h-full relative'>
@@ -118,7 +121,6 @@ const RecentProjects = () => {
                   className='w-full h-full object-center rounded-3xl'
                   style={{
                     transform: `rotate(${index % 2 === 0 ? -3 : 3}deg)`,
-                    zIndex: 10 - index
                   }}
                 />
                 <img 
@@ -128,7 +130,6 @@ const RecentProjects = () => {
                   style={{
                     transform: `rotate(${index % 2 === 0 ? -3 : 3}deg)`,
                     borderRadius: '36px',
-                    zIndex: 10 - index
                   }}
                 />
                 </div>
@@ -136,7 +137,8 @@ const RecentProjects = () => {
                 style={{
                   transform: `rotate(${index % 2 === 0 ? -3 : 3}deg)`,
                 }}>
-                  {iconLists.map((icon, index) => (
+                   <AnimatedTooltip items={iconLists} />
+                  {/* {iconLists.map((icon, index) => (
                     <div 
                       key={icon} 
                       className='border border-white/[0.2] rounded-full bg-black lg:w-10 lg:h-10 sm:w-10 sm:h-10 w-10 h-10 flex justify-center items-center'
@@ -148,7 +150,7 @@ const RecentProjects = () => {
                         className='p-2' 
                       />
                     </div>
-                  ))}
+                  ))} */}
                 </div>
               </Tilt>
             ))}

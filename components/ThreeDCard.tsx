@@ -3,13 +3,14 @@
 import Image from "next/image";
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
+import { AnimatedTooltip } from "./ui/AnimatedTooltip";
 
 interface ThreeDCardProps {
   title: string;
   description: string;
   link: string;
   img: string;
-  iconLists: string[];
+  iconLists: Array<Object>;
   demo: string;
 
 }
@@ -58,7 +59,8 @@ export function ThreeDCard({ title, description, link, img, iconLists, demo }: T
           >
            <div className='flex items-center justify-between mt-7 mb-3'>
                 <div className='flex items-center'>
-                  {iconLists.map((icon, index) => (
+                <AnimatedTooltip items={iconLists} />
+                  {/* {iconLists.map((icon, index) => (
                     <div 
                       key={icon} 
                       className='border border-white/[0.2] rounded-full bg-black lg:w-10 lg:h-10 sm:w-10 sm:h-10 w-10 h-10 flex justify-center items-center'
@@ -70,9 +72,9 @@ export function ThreeDCard({ title, description, link, img, iconLists, demo }: T
                         className='p-2' 
                       />
                     </div>
-                  ))}
+                  ))} */}
                 </div>
-                </div>
+            </div>
           </CardItem>
           <CardItem
             translateZ={20}
