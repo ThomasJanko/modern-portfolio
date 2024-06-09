@@ -18,7 +18,6 @@ jobs:
           cd /home/thomas-jan/Dev/Portfolio/modern-portfolio/
           git pull origin main
     
-    steps:
       - name: Docker
         run:
           docker compose down
