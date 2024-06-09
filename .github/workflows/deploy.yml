@@ -19,8 +19,8 @@ jobs:
           git pull origin main
     
     steps:
-    - name: Docker
-      run:
-        docker compose down
-        docker compose up -d
+      - name: Docker
+        run:
+          docker compose down
+          docker compose up -d
          
