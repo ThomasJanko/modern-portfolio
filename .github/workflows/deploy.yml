@@ -13,10 +13,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Pull latest changes and run Docker container
+      - name: Pull latest changes
         run: 
-          docker ps
-          # cd /home/thomas-jan/Dev/Portfolio/modern-portfolio/
-          # git pull origin main
-          # docker-compose down
-          # docker-compose up -d
+          cd /home/thomas-jan/Dev/Portfolio/modern-portfolio/
+          git pull origin main
+    
+    steps:
+    - name: Docker
+      run:
+        docker compose down
+        docker compose up -d
+         
