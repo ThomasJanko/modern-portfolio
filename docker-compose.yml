@@ -1,6 +1,7 @@
 version: '3'
 services:
   app:
+    container_name: modern-portfolio
     build: 
       context: .
       dockerfile: Dockerfile
