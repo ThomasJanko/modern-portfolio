@@ -1,0 +1,21 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Pull latest changes and run Docker container
+        run: |
+          cd /home/thomas-jan/Dev/Portfolio/modern-portfolio/
+          git pull origin main
+          docker-compose down
+          docker-compose up -d
