@@ -14,8 +14,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Pull latest changes and run Docker container
-        run: |
-          cd /home/thomas-jan/Dev/Portfolio/modern-portfolio/
-          git pull origin main
-          docker-compose down
-          docker-compose up -d
+        run: 
+          docker ps
+          # cd /home/thomas-jan/Dev/Portfolio/modern-portfolio/
+          # git pull origin main
+          # docker-compose down
+          # docker-compose up -d
