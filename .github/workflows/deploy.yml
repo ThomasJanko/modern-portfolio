@@ -14,12 +14,12 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Pull latest changes
-        run: 
+        run: |
           cd /home/thomas-jan/Dev/Portfolio/modern-portfolio/
           git pull origin main
     
       - name: Docker
-        run:
+        run: |
           docker compose down
           docker compose up -d
          
