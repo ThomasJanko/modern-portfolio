@@ -23,7 +23,7 @@ const Hero = () => {
               words='Transforming Concepts into Seamless User Experiences'
             />
             <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>
-              Hi I&apos;am Thomas, a Fullstack Developper based in Paris
+              Hi I&apos;am Thomas Jankowski, a Fullstack Developper based in Paris
             </p>
             <a href="#about">
               <ShimmerButton 
