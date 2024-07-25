@@ -105,7 +105,7 @@ const RecentProjects = () => {
               <Tilt key={index} className='relative flex flex-col rounded-xl w-[300px] h-auto'>
                 <div className='w-full h-full relative'>
                 <img
-                  src='https://imgs.search.brave.com/aUFvZvEvh63QpAy0tnaWIhXFjf-6AVqHyhSbHTeHZIc/rs:fit:860:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy8z/LzM0L0lQaG9uZV8x/Ml9CbHVlLnN2Zw.svg'
+                  src='/images/iphoneX_bg.webp'
                   alt='bg-img'
                   className='w-full h-full object-center rounded-3xl'
                   style={{
