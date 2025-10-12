@@ -3,6 +3,8 @@ import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import ShimmerButton from './ui/ShimmerButton'
 import { FaArrowRight } from 'react-icons/fa6'
+import Image from 'next/image'
+import { Tilt } from 'react-tilt'
 
 const Hero = () => {
   return (
@@ -25,6 +27,12 @@ const Hero = () => {
             <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>
               Hi I&apos;am Thomas Jankowski, a Fullstack Developper based in Paris
             </p>
+            <Tilt className='flex justify-center my-4'>
+              <div className='w-full h-full relative'>
+                <Image src='/CV/CV.png' alt='CV' width={500} height={500} className='rounded-md cursor-pointer' 
+                onClick={() => window.open('/CV/CV.pdf', '_blank')} />
+              </div>
+            </Tilt>
             <a href="#about">
               <ShimmerButton 
                 title={'Show my Work'}
