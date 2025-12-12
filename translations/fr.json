@@ -1,0 +1,177 @@
+{
+  "nav": {
+    "about": "À propos",
+    "projects": "Projets",
+    "technologies": "Technologies",
+    "experiences": "Expériences",
+    "contact": "Contact"
+  },
+  "hero": {
+    "subtitle": "Magie Web Dynamique avec Next.JS",
+    "title": "Transformer les Concepts en Expériences Utilisateur Fluides",
+    "description": "Salut, je suis Thomas Jankowski, un Développeur Fullstack basé à Paris",
+    "showWork": "Voir mon travail"
+  },
+  "grid": {
+    "clientCollaboration": "Je privilégie la collaboration avec les clients, en favorisant une communication ouverte",
+    "timezone": "Je suis très flexible avec les communications de fuseau horaire",
+    "techStack": "Ma stack technique",
+    "techStackDesc": "J'essaie constamment de m'améliorer",
+    "techEnthusiast": "Passionné de technologie avec une passion pour le développement.",
+    "currentProject": "Actuellement en train de construire une application SaaS IA avec un système de paiement.",
+    "currentProjectDesc": "Les Détails",
+    "startProject": "Voulez-vous démarrer un projet ensemble ?",
+    "copyEmail": "Copier mon adresse e-mail",
+    "emailCopied": "E-mail copié !"
+  },
+  "projects": {
+    "recentSelection": "Une petite sélection de",
+    "recentProjects": "projets récents",
+    "moreProjects": "Plus de projets",
+    "onTheWay": "en cours",
+    "mobileApps": "Et quelques",
+    "mobileApp": "Applications Mobiles"
+  },
+  "technologies": {
+    "title": "Mes",
+    "technologies": "Technologies Principales"
+  },
+  "experiences": {
+    "title": "Mes",
+    "workExperiences": "expériences professionnelles"
+  },
+  "approach": {
+    "title": "Mon",
+    "approach": "approche",
+    "phase": "Phase"
+  },
+  "footer": {
+    "title": "Prêt à faire passer",
+    "your": "votre",
+    "digitalPresence": "présence numérique au niveau supérieur ?",
+    "description": "Contactez-moi dès aujourd'hui et discutons de la façon dont je peux vous aider à atteindre vos objectifs.",
+    "getInTouch": "Me contacter",
+    "copyright": "Copyright © 2024 Thomas. Tous droits réservés."
+  },
+  "projectsData": {
+    "smoldAI": {
+      "title": "SmoldAI - SaaS IA",
+      "description": "Application intégrant plusieurs Intelligences Artificielles. Capacité à générer du texte, du code, des images, de la musique et des vidéos. Connexion avec OAuth, traitement des paiements Stripe, gestion des utilisateurs, gestion des commandes et gestion des abonnements..."
+    },
+    "spotify": {
+      "title": "Spotify Clone - Lecteur de Musique",
+      "description": "Reproduction du site de streaming Spotify. Téléchargement de musique via AWS S3, convertisseur de musique en mp3, création de playlists, ajout de musique à une playlist, lecture de musique, recherche de musique, écoute simultanée via sockets..."
+    },
+    "imaginify": {
+      "title": "Imaginify - SaaS d'Images IA",
+      "description": "Conception d'images utilisant des fonctionnalités IA et un système de paiements et de crédits utilisant la dernière stack technique."
+    },
+    "crypto": {
+      "title": "Crypto-app - Application Blockchain",
+      "description": "Application de transfert de cryptomonnaies. Permet la création de compte, l'authentification, la visualisation du solde, les transferts d'argent, la visualisation de l'historique des transactions et l'envoi de messages dans une transaction..."
+    },
+    "gFormation": {
+      "title": "G-Formation - Plateforme de Formation",
+      "description": "Mise en place d'une interface web interconnectée dans le but d'offrir des formations relatives à l'ERP GESTIMUM."
+    },
+    "revochat": {
+      "title": "Revochat - Application de Chat",
+      "description": "Développement d'une application de chat sécurisée, similaire à discord."
+    },
+    "airbnb": {
+      "title": "AirBnb clone - Plateforme de Réservation",
+      "description": "Clone d'Airbnb. Permet aux utilisateurs de créer un compte, rechercher un hébergement, réserver un hébergement, consulter l'historique des réservations et gérer leur compte..."
+    },
+    "netflix": {
+      "title": "Netflix clone - Plateforme de Streaming",
+      "description": "Reproduction du site de streaming Netflix. Utilisation de Next.js et de l'API opensource themoviedb. Création d'une page d'authentification et de services de récupération de films..."
+    },
+    "sportizer": {
+      "title": "Sportizer - Tableau de Score de Basketball",
+      "description": "Application de tableau de score de basketball dynamique et ergonomique pour remplacer les anciens tableaux de score dans les salles de sport. Création d'une interface 'télécommande' et d'une interface 'écran' pour contrôler toutes les variables du match..."
+    },
+    "instagram": {
+      "title": "Instagram Clone - Réseau Social",
+      "description": "Reproduction du réseau social Instagram. Permet aux utilisateurs de créer un compte, publier des photos, voir des photos et gérer leur compte..."
+    },
+    "taskmaster": {
+      "title": "TaskMaster - Gestionnaire de Tâches",
+      "description": "Application de gestionnaire de tâches. Permet aux utilisateurs de créer des tâches, voir les tâches, les gérer et les compléter."
+    },
+    "nft": {
+      "title": "Marketplace NFT - Blockchain",
+      "description": "Marketplace NFT. Permet aux utilisateurs de voir les NFT et de placer des enchères sur eux."
+    }
+  },
+  "experiencesData": {
+    "vueDev": {
+      "title": "Développeur Vue JS",
+      "points": [
+        "Stage pour DUT, premier stage en développement web.",
+        "Auto-formation de deux semaines sur Vue JS, Vuetify et Laravel.",
+        "Collaboration avec un stagiaire développeur backend pour créer une plateforme web afin de remplacer le processus d'organisation de formation de l'entreprise.",
+        "Participation à la création du projet (maquette, base de données, etc.)."
+      ]
+    },
+    "reactDev": {
+      "title": "Développeur React JS",
+      "points": [
+        "Projet Ydays (école) dans une startup avec 3 personnes.",
+        "Collaboration avec 3 équipes de 4-5 personnes (marketing, design 3D et IT).",
+        "Conception d'une application de tableau de score de basketball dynamique et ergonomique pour remplacer les anciens tableaux de score dans les salles de sport.",
+        "Création d'une interface 'télécommande' et d'une interface 'écran' pour contrôler toutes les variables du match.",
+        "Utilisation d'un serveur socket.io pour minimiser le délai de transmission entre la télécommande et l'affichage.",
+        "Voir PDF ->"
+      ]
+    },
+    "fullstack1": {
+      "title": "Développeur Fullstack",
+      "points": [
+        "Reprise du développement de la plateforme G-Formation.",
+        "Collaboration avec 2 nouveaux stagiaires.",
+        "Mise en place d'emails automatiques (Mailtrap) et début des tests au sein de l'entreprise.",
+        "Mise en place d'un serveur pour héberger la première version de production interne de la plateforme."
+      ]
+    },
+    "frontendDev": {
+      "title": "Développeur Frontend",
+      "points": [
+        "Développement d'une application de messagerie instantanée Web3 en React JS.",
+        "Projet Ydays (école) avec une équipe de 7 développeurs.",
+        "Utilisation de la technologie Web3.0 pour créer l'une des premières applications de chat sur la Blockchain, garantissant son immutabilité.",
+        "Déploiement de l'application en utilisant des Smart Contracts."
+      ]
+    },
+    "fullstack2": {
+      "title": "Développeur Fullstack",
+      "points": [
+        "Reprise du développement de la plateforme G-Formation avec les mêmes stagiaires.",
+        "Mise en place d'un serveur SMTP pour envoyer des emails aux clients.",
+        "Test de la plateforme avec tous les services de l'entreprise pour identifier les problèmes potentiels et les familiariser avec la plateforme.",
+        "Mise en place d'un planificateur de tâches avec Laravel pour l'exécution automatique de certaines fonctionnalités du site.",
+        "Ouverture de la plateforme à l'externe pour organiser de vraies sessions de formation avec les clients et partenaires de Gestimum.",
+        "Création d'un site de pré-production pour continuer les tests et ajouter de nouvelles fonctionnalités.",
+        "Mise à jour et maintenance de la plateforme G-Formation.",
+        "Développement d'une application de gestion de tickets interne (G-Tickets) avec intégrations (Teams / Graph API) pour faciliter et accélérer le traitement interne.",
+        "Refonte de l'espace privé Gestimum (Espace Client) avec de nouvelles technologies (Vue.js / Express.js) et déploiement de la nouvelle version.",
+        "Développement d'une API pour interfacer entre Gestimum et une entreprise externe (Kaze) pour faciliter les interventions techniques pour les clients de Gestimum.",
+        "Déploiement de l'espace privé, G-Ticket et l'API d'interfaçage avec Docker sur un serveur Ubuntu."
+      ]
+    }
+  },
+  "approachData": {
+    "planning": {
+      "title": "Planification & Stratégie",
+      "description": "L'une des phases les plus importantes du projet est la phase de planification et de stratégie. C'est là que nous définissons la portée du projet, les objectifs et les exigences."
+    },
+    "design": {
+      "title": "Design & Développement",
+      "description": "Une fois la phase de planification et de stratégie terminée, nous passons à la phase de design et de développement. C'est là que nous créons le design visuel et développons le projet."
+    },
+    "testing": {
+      "title": "Tests & Déploiement",
+      "description": "Après la phase de design et de développement terminée, nous passons à la phase de tests et de déploiement. C'est là que nous testons le projet pour nous assurer qu'il répond aux exigences et le déployons dans l'environnement de production."
+    }
+  }
+}
+

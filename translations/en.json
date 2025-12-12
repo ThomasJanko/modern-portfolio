@@ -1,0 +1,177 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "technologies": "Technologies",
+    "experiences": "Experiences",
+    "contact": "Contact"
+  },
+  "hero": {
+    "subtitle": "Dynamic Web Magic with Next.JS",
+    "title": "Transforming Concepts into Seamless User Experiences",
+    "description": "Hi I'm Thomas Jankowski, a Fullstack Developer based in Paris",
+    "showWork": "Show my Work"
+  },
+  "grid": {
+    "clientCollaboration": "I prioritize client collaboration, fostering open communication",
+    "timezone": "I'm very flexible with time zone communications",
+    "techStack": "My tech stack",
+    "techStackDesc": "I constantly try to improve",
+    "techEnthusiast": "Tech enthusiast with a passion for development.",
+    "currentProject": "Currently building an AI SaaS app with a payments system.",
+    "currentProjectDesc": "The Inside Scoop",
+    "startProject": "Do you want to start a project together?",
+    "copyEmail": "Copy my email address",
+    "emailCopied": "Email is Copied!"
+  },
+  "projects": {
+    "recentSelection": "A small selection of",
+    "recentProjects": "recent projects",
+    "moreProjects": "More projects",
+    "onTheWay": "on the way",
+    "mobileApps": "And some",
+    "mobileApp": "Mobile App"
+  },
+  "technologies": {
+    "title": "My Top",
+    "technologies": "Technologies"
+  },
+  "experiences": {
+    "title": "My",
+    "workExperiences": "work experiences"
+  },
+  "approach": {
+    "title": "My",
+    "approach": "approach",
+    "phase": "Phase"
+  },
+  "footer": {
+    "title": "Ready to take",
+    "your": "your",
+    "digitalPresence": "digital presence to the next level?",
+    "description": "Reach out to me today and let's discuss how I can help you achieve your goals.",
+    "getInTouch": "Get in touch",
+    "copyright": "Copyright © 2024 Thomas. All rights reserved."
+  },
+  "projectsData": {
+    "smoldAI": {
+      "title": "SmoldAI - AI SasS",
+      "description": "Application integrating multiple Artificial Intelligences. Capability to generate text, code, images, music, and videos. Connect with OAuth, Stripe payment processing, user management, order management, and subscription management..."
+    },
+    "spotify": {
+      "title": "Spotify Clone - Music Player",
+      "description": "Reproduction of the Spotify streaming site. Music upload via AWS S3, music converter to mp3, playlist creation, adding music to a playlist, music playback, music search, simultaneous listening via sockets..."
+    },
+    "imaginify": {
+      "title": "Imaginify - AI Image SaaS",
+      "description": "Images design using AI features and a payments and credits system using the latest tech stack."
+    },
+    "crypto": {
+      "title": "Crypto-app - Blockchain Application",
+      "description": "Cryptocurrency transfer application. Allows account creation, authentication, balance viewing, money transfers, transaction history viewing, and sending messages within a transaction..."
+    },
+    "gFormation": {
+      "title": "G-Formation - Training Platform",
+      "description": "Implementation of an interconnected web interface with the aim of offering training relating to the GESTIMUM ERP."
+    },
+    "revochat": {
+      "title": "Revochat - Chat App",
+      "description": "Developed a Secure App Chat appllication, similar to discord."
+    },
+    "airbnb": {
+      "title": "AirBnb clone - Booking Platform",
+      "description": "Airbnb clone. Allows users to create an account, search for accommodation, book accommodation, view booking history, and manage their account..."
+    },
+    "netflix": {
+      "title": "Netflix clone - Streaming Platform",
+      "description": "Reproduction of the Netflix streaming site. Use of Next.js and the opensource themoviedb api. Creation of an authentication page and movie retrieval services..."
+    },
+    "sportizer": {
+      "title": "Sportizer - Basketball Scoreboard",
+      "description": "Dynamic and ergonomic basketball scoreboard application to replace old scoreboards in gyms. Created a 'remote' interface and a 'screen' interface to control all match variables..."
+    },
+    "instagram": {
+      "title": "Instagram Clone - Social Media",
+      "description": "Reproduction of the Instagram social network. Allows users to create an account, post photos, view photos, and manage their account..."
+    },
+    "taskmaster": {
+      "title": "TaskMaster - Task Manager",
+      "description": "Task manager application. Allows users to create tasks, view task, manage it and complete it."
+    },
+    "nft": {
+      "title": "NFT Marketplace - Blockchain",
+      "description": "NFT Marketplace. Allows users to see NFTs, and place bids on them."
+    }
+  },
+  "experiencesData": {
+    "vueDev": {
+      "title": "Vue JS Developer",
+      "points": [
+        "Internship for DUT, first internship in web development.",
+        "Two-week self-training on Vue JS, Vuetify, and Laravel.",
+        "Collaborated with a backend developer intern to create a web platform to replace the company's training organization process.",
+        "Participated in the project creation (mockup, database, etc.)."
+      ]
+    },
+    "reactDev": {
+      "title": "React JS Developer",
+      "points": [
+        "Ydays project (school) in a startup with 3 people.",
+        "Collaborated with 3 teams of 4-5 people (marketing, 3D design, and IT).",
+        "Designed a dynamic and ergonomic basketball scoreboard application to replace old scoreboards in gyms.",
+        "Created a 'remote' interface and a 'screen' interface to control all match variables.",
+        "Used a socket.io server to minimize transmission delay between the remote and display.",
+        "See PDF ->"
+      ]
+    },
+    "fullstack1": {
+      "title": "Fullstack Developer",
+      "points": [
+        "Resumed development of the G-Formation platform.",
+        "Collaborated with 2 new interns.",
+        "Implemented automatic emails (Mailtrap) and began launching tests within the company.",
+        "Set up a server to host the first internal production version of the platform."
+      ]
+    },
+    "frontendDev": {
+      "title": "Frontend Developer",
+      "points": [
+        "Developed a Web3 instant messaging application in React JS.",
+        "Ydays project (school) with a team of 7 developers.",
+        "Used Web3.0 technology to create one of the first chat applications on the Blockchain, ensuring its immutability.",
+        "Deployed the application using Smart Contracts."
+      ]
+    },
+    "fullstack2": {
+      "title": "Fullstack Developer",
+      "points": [
+        "Resumed development of the G-Formation platform with the same interns.",
+        "Implemented an SMTP server to send emails to clients.",
+        "Tested the platform with all company services to identify potential issues and familiarize them with the platform.",
+        "Set up a task scheduler with Laravel for automatic execution of certain site features.",
+        "Opened the platform externally to organize real training sessions with Gestimum clients and partners.",
+        "Created a pre-production site to continue testing and adding new features.",
+        "Updated and maintained the G-Formation platform.",
+        "Developed an internal ticket management application (G-Tickets) with integrations (Teams / Graph API) to facilitate and speed up internal processing.",
+        "Redesigned the Gestimum private space (Client area) with new technologies (Vue.js / Express.js) and deployed the new version.",
+        "Developed an API to interface between Gestimum and an external company (Kaze) to facilitate technical interventions for Gestimum clients.",
+        "Deployed the private space, G-Ticket, and the interfacing API with Docker on an Ubuntu server."
+      ]
+    }
+  },
+  "approachData": {
+    "planning": {
+      "title": "Planning & Strategy",
+      "description": "One of the most important phases of the project is the planning and strategy phase. This is where we define the project scope, objectives, and requirements."
+    },
+    "design": {
+      "title": "Design & Development",
+      "description": "Once the planning and strategy phase is complete, we move on to the design and development phase. This is where we create the visual design and develop the project."
+    },
+    "testing": {
+      "title": "Testing & Deployment",
+      "description": "After the design and development phase is complete, we move on to the testing and deployment phase. This is where we test the project to ensure it meets the requirements and deploy it to the live environment."
+    }
+  }
+}
+

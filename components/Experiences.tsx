@@ -1,21 +1,35 @@
+'use client';
 import React from 'react'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import { experiences } from '@/data';
 import { TracingBeam } from './ui/TracingBeam';
+import { useLanguage } from '@/contexts/LanguageContext';
 // import 'react-vertical-timeline-component/style.min.css'
 
 const Experiences = () => {
+  const { t } = useLanguage();
+  
+  const experienceKeys = ['vueDev', 'reactDev', 'fullstack1', 'frontendDev', 'fullstack2'];
+  const translatedExperiences = experiences.map((exp, index) => {
+    const key = experienceKeys[index];
+    const translatedPoints = t(`experiencesData.${key}.points`);
+    return {
+      ...exp,
+      title: t(`experiencesData.${key}.title`),
+      points: Array.isArray(translatedPoints) ? translatedPoints : exp.points
+    };
+  });
 
   return (
     <div className='py-20' id="experiences">
       <h1 className='heading'>
-        My <span className='text-purple'>work experiences</span>
+        {t('experiences.title')} <span className='text-purple'>{t('experiences.workExperiences')}</span>
       </h1>
       <div>
       <TracingBeam className="px-6">
         <div className='mt-20 flex flex-col'>
           <VerticalTimeline>
-            {experiences.map((experience) => (
+            {translatedExperiences.map((experience) => (
               <ExperienceCard key={experience.date} experience={experience} />
             ))}
           </VerticalTimeline>

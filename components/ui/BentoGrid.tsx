@@ -1,8 +1,10 @@
 'use client';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { IoCopyOutline } from "react-icons/io5";
+import dynamic from "next/dynamic";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-import Lottie from "react-lottie";
+const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 
 import { BackgroundGradientAnimation } from "./GradientBg";
 import { GridGlobe } from "./GridGlobe";
@@ -62,16 +64,24 @@ export const BentoGridItem = ({
     { name: "MongoDB", img: "/mongo.webp" },
   ];
 
+  const { t } = useLanguage();
   const [copied, setCopied] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const handleCopy = () => {
     // copy email to clipboard
-    const text = "thomas78125@gmail.com";
-    navigator.clipboard.writeText(text);
-    setCopied(true);
-    setTimeout(() => {
-      setCopied(false);
-    }, 4000);
+    if (typeof navigator !== 'undefined' && navigator.clipboard) {
+      const text = "thomas78125@gmail.com";
+      navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => {
+        setCopied(false);
+      }, 4000);
+    }
   };
 
   return (
@@ -182,23 +192,24 @@ export const BentoGridItem = ({
           )}
           {id === 6 && (
             <div className="mt-5 relative">
-              <div
-                className={`absolute -bottom-5 right-0`}
-              >
-                <Lottie options={{
-                  loop: copied,
-                  autoplay: copied,
-                  animationData: animationData,
-                  rendererSettings: {
-                    preserveAspectRatio: "xMidYMid slice",
-                  },
-                }}
-                  
-                />
-              </div>
+              {isMounted && copied && (
+                <div
+                  className={`absolute -bottom-5 right-0`}
+                >
+                  <Lottie options={{
+                    loop: copied,
+                    autoplay: copied,
+                    animationData: animationData,
+                    rendererSettings: {
+                      preserveAspectRatio: "xMidYMid slice",
+                    },
+                  }}
+                  />
+                </div>
+              )}
 
               <ShimmerButton
-                title={copied ? "Email is Copied!" : "Copy my email address"}
+                title={copied ? t('grid.emailCopied') : t('grid.copyEmail')}
                 icon={<IoCopyOutline />}
                 position="left"
                 handleClick={handleCopy}

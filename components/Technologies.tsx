@@ -1,13 +1,17 @@
+'use client';
 import { technologies, workExperience } from '@/data'
 import React from 'react'
 import { Button } from './ui/MovingBorder'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const Technologies = () => {
+  const { t } = useLanguage();
+  
   return (
     <div className='py-20' id="technologies">
         <h1 className='heading'>
-            My Top {' '}
-            <span className='text-purple'>Technologies</span>
+            {t('technologies.title')} {' '}
+            <span className='text-purple'>{t('technologies.technologies')}</span>
         </h1>
         <div className='w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10'>
             {technologies.map((tech, index) =>(

@@ -4,20 +4,23 @@ import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "./ui/CanvasRevealEffect";
 import { approachs } from "@/data";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Approach = () => {
+  const { t } = useLanguage();
+  
   return (
     <section className="w-full py-20">
         <h1 className="heading">
-            My {" "}
-            <span className="text-purple">approach</span>
+            {t('approach.title')} {" "}
+            <span className="text-purple">{t('approach.approach')}</span>
         </h1>
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center gap-4">
         {approachs.map((approach, index) => (
         <Card key={approach.id} 
-            title={approach.title}
-            icon={<AceternityIcon order={`Phase ${index+1}`} />}
-            description={approach.description}
+            title={t(`approachData.${approach.id === 1 ? 'planning' : approach.id === 2 ? 'design' : 'testing'}.title`)}
+            icon={<AceternityIcon order={`${t('approach.phase')} ${index+1}`} />}
+            description={t(`approachData.${approach.id === 1 ? 'planning' : approach.id === 2 ? 'design' : 'testing'}.description`)}
         >
           <CanvasRevealEffect
             colors={approach.colors}

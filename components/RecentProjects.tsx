@@ -1,4 +1,4 @@
-
+'use client';
 import React from 'react'
 import { projects, reactNativeProjects } from '@/data'
 import { PinContainer } from './ui/3d-pin'
@@ -8,8 +8,25 @@ import { Meteors } from './ui/Meteor'
 import { Tilt } from 'react-tilt'
 import { AnimatedTooltip } from './ui/AnimatedTooltip'
 import { BackgroundBeams } from './ui/BackgroundBeam'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const RecentProjects = () => {
+  const { t } = useLanguage();
+  
+  const projectKeys = ['smoldAI', 'spotify', 'imaginify', 'crypto', 'gFormation', 'revochat', 'airbnb', 'netflix', 'sportizer'];
+  const reactNativeKeys = ['instagram', 'taskmaster', 'nft'];
+  
+  const translatedProjects = projects.map((project, index) => ({
+    ...project,
+    title: t(`projectsData.${projectKeys[index]}.title`),
+    des: t(`projectsData.${projectKeys[index]}.description`)
+  }));
+  
+  const translatedReactNativeProjects = reactNativeProjects.map((project, index) => ({
+    ...project,
+    title: t(`projectsData.${reactNativeKeys[index]}.title`),
+    des: t(`projectsData.${reactNativeKeys[index]}.description`)
+  }));
 
   const randomColors = () => {
     const colors = [
@@ -25,11 +42,11 @@ const RecentProjects = () => {
   return (
     <div className='py-20' id="projects">
         <h1 className='heading'>
-            A small selection of {' '}
-            <span className='text-purple'>recent projects</span>
+            {t('projects.recentSelection')} {' '}
+            <span className='text-purple'>{t('projects.recentProjects')}</span>
         </h1>
         <div className='flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-20 mt-10'>
-        {projects.slice(0,4).map(({id, title, des, link, img, iconLists, demo}) => (
+        {translatedProjects.slice(0,4).map(({id, title, des, link, img, iconLists, demo}) => (
           <div key={id} className='relative sm:h-[41rem] lg:min-h-[32.5rem] h-[32rem] flex items-center justify-center sm:w-[570px] w-[80vw]' >
             <ThreeDCard 
               title={title} 
@@ -48,12 +65,12 @@ const RecentProjects = () => {
         </div>
 
         <h1 className='heading mt-6'>
-            More projects {' '}
-            <span className='text-purple'>on the way</span>
+            {t('projects.moreProjects')} {' '}
+            <span className='text-purple'>{t('projects.onTheWay')}</span>
         </h1>
 
         <div className='flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10'>
-        {projects.slice(4).map(({id, title, des, link, img, iconLists, demo}) => (
+        {translatedProjects.slice(4).map(({id, title, des, link, img, iconLists, demo}) => (
           <div key={id} className='sm:h-[41rem] lg:min-h-[32.5rem] h-[32rem] flex items-center justify-center sm:w-[570px] w-[80vw]'>
             <PinContainer title={demo} href={demo}>
               <div className='relative flex items-center justify-center sm:w-[570px] sm:h-[40vh] w-[80vw] overflow-hidden h-[30vh] mb-10' onClick={() => window.open(demo, '_blank')}>
@@ -92,12 +109,12 @@ const RecentProjects = () => {
         </div>
 
         <h1 className='heading mt-6'>
-            And some {' '}
-            <span className='text-purple'>Mobil App</span>
+            {t('projects.mobileApps')} {' '}
+            <span className='text-purple'>{t('projects.mobileApp')}</span>
         </h1>
 
         <div className='relative flex flex-wrap dark:bg-black-100 bg-grid-black/[0.2] dark:bg-grid-white/[0.03] bg-opacity-10 bg-white items-center justify-center p-4 gap-x-24 gap-y-20 mt-10'>
-        {reactNativeProjects.map(({id, title, des, link, img, iconLists, demo}) => (
+        {translatedReactNativeProjects.map(({id, title, des, link, img, iconLists, demo}) => (
           <div key={id} className='flex flex-col items-center justify-center'>
             <span className='font-bold text-xl sm:text-2xl text-center'> {title} </span>
             <div className='flex flex-wrap justify-center gap-x-20 gap-y-20 mt-10'>

@@ -8,6 +8,7 @@ import {
 } from "framer-motion";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const FloatingNav = ({
   navItems,
@@ -20,6 +21,7 @@ export const FloatingNav = ({
   }[];
   className?: string;
 }) => {
+  const { t } = useLanguage();
   const { scrollYProgress } = useScroll();
 
   const [visible, setVisible] = useState(false);
