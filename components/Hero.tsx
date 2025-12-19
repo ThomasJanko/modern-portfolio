@@ -9,7 +9,15 @@ import { Tilt } from 'react-tilt'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 const Hero = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  
+  const cvImage = language === 'fr' 
+    ? '/CV/JANKOWSKI THOMAS CV 2025.png' 
+    : '/CV/JANKOWSKI THOMAS CV - EN.png';
+  
+  const cvPdf = language === 'fr' 
+    ? '/CV/JANKOWSKI THOMAS CV 2025.pdf' 
+    : '/CV/JANKOWSKI THOMAS CV 2025 - EN.pdf';
   
   return (
     <div className='pb-20 pt-36'>
@@ -33,8 +41,8 @@ const Hero = () => {
             </p>
             <Tilt className='flex justify-center my-4'>
               <div className='w-full h-full relative'>
-                <Image src='/CV/CV.png' alt='CV' width={500} height={500} className='rounded-md cursor-pointer' 
-                onClick={() => window.open('/CV/CV.pdf', '_blank')} />
+                <Image src={cvImage} alt='CV' width={500} height={500} className='rounded-md cursor-pointer' 
+                onClick={() => window.open(cvPdf, '_blank')} />
               </div>
             </Tilt>
             <a href="#about">
