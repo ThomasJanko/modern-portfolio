@@ -9,7 +9,7 @@ import MobileProjectsShowcase from './MobileProjectsShowcase'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 export type PortfolioCategory = 'all' | 'web' | 'mobile' | 'web3';
-const projectKeys = ['smoldAI', 'spotify', 'imaginify', 'crypto', 'gFormation', 'revochat', 'airbnb', 'netflix', 'sportizer', 'weddinghat'];
+const projectKeys = ['smoldAI', 'spotify', 'imaginify', 'crypto', 'gFormation', 'revochat', 'airbnb', 'netflix', 'sportizer', 'stocksapp', 'weddinghat'];
 const reactNativeKeys = ['instagram', 'taskmaster', 'nft'];
 
 type RecentProjectsProps = {

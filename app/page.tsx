@@ -11,6 +11,7 @@ import CategoryPanel from "@/components/CategoryPanel";
 import { FloatingNav } from "@/components/ui/FloatingNav";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { useLanguage } from "@/contexts/LanguageContext";
+import Image from "next/image";
 
 export default function Home() {
   const { t } = useLanguage();
@@ -33,6 +34,8 @@ export default function Home() {
   
   return (
     <main className="relative bg-background text-foreground flex justify-center items-center flex-col mx-auto sm:px-10 px-5 overflow-clip">
+      <Image src="/logo.png" alt="Logo" width={100} height={100} className='fixed top-4 left-2 z-[5001]' />
+
       <LanguageSwitcher />
       <CategoryPanel
         categories={categories}

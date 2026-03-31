@@ -120,6 +120,10 @@
       "title": "Sportizer - Basketball Scoreboard",
       "description": "Dynamic and ergonomic basketball scoreboard application to replace old scoreboards in gyms. Created a 'remote' interface and a 'screen' interface to control all match variables..."
     },
+    "stocksapp": {
+      "title": "Stocks-App - Real Time Market",
+      "description": "Real-time stocks market platform with alerts, TradingView charts, and AI features (Next.js, MongoDB, TypeScript, Tailwind CSS, AI)."
+    },
     "weddinghat": {
       "title": "Wedding-Hat - Wedding Organization SaaS",
       "description": "All-in-one wedding planning SaaS with RSVP boosted with MCP AI assistant: WeddingGPT can directly CRUD data in-app. Includes website builder, organization workflows, role management, table plan, seating cards, playlists, guest/vendor management, and budgets."

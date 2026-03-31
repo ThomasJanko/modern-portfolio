@@ -120,6 +120,10 @@
       "title": "Sportizer - Tableau de Score de Basketball",
       "description": "Application de tableau de score de basketball dynamique et ergonomique pour remplacer les anciens tableaux de score dans les salles de sport. Création d'une interface 'télécommande' et d'une interface 'écran' pour contrôler toutes les variables du match..."
     },
+    "stocksapp": {
+      "title": "Stocks-App - Marché en Temps Réel",
+      "description": "Plateforme de marché boursier en temps réel avec alertes, graphiques TradingView et fonctionnalités IA (Next.js, MongoDB, TypeScript, Tailwind CSS, IA)."
+    },
     "weddinghat": {
       "title": "Wedding-Hat - SaaS d'Organisation de Mariage",
       "description": "SaaS d'organisation de mariage tout-en-un avec RSVP boosté par une IA MCP: WeddingGPT peut faire du CRUD directement dans l'application. Inclut site de mariage, organisation, gestion des rôles, plan de table, cartes de placement, playlists, gestion invités/prestataires et budgets."
