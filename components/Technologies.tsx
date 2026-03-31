@@ -1,5 +1,5 @@
 'use client';
-import { technologies, workExperience } from '@/data'
+import { technologies } from '@/data'
 import React from 'react'
 import { Button } from './ui/MovingBorder'
 import { useLanguage } from '@/contexts/LanguageContext'
@@ -36,13 +36,19 @@ const Technologies = () => {
                         <div className='mt-3 lg:mt-0 lg:ms-5'>
                             <div className='flex flex-wrap gap-4 items-center'>
                                 {tech.items.map((item) => (
-                                    <img
-                                        key={item.name} 
-                                        src={item.icon} 
-                                        alt={item.name} 
-                                        className='w-10 h-10 hover:scale-110 object-center transition-all duration-200'
+                                    <button
+                                        key={item.name}
+                                        type='button'
+                                        aria-label={item.name}
+                                        className='hover:scale-110 transition-all duration-200'
                                         onClick={() => window.open(item.link, '_blank')}
-                                    />
+                                    >
+                                        <img
+                                            src={item.icon}
+                                            alt={item.name}
+                                            className='w-10 h-10 object-center'
+                                        />
+                                    </button>
                                 ))}
                             </div>
                         </div>

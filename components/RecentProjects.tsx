@@ -39,7 +39,7 @@ const RecentProjects = ({ activeCategory }: RecentProjectsProps) => {
 
   const webProjects = translatedProjects.filter((project) => project.category === 'web' && project.type === 'web');
   const web3Projects = translatedProjects.filter((project) => project.category === 'web3' && project.type === 'web');
-  const mobileProjects = translatedReactNativeProjects.filter((project) => project.category === 'mobile' && project.type === 'mobile');
+  const mobileProjects = translatedReactNativeProjects.filter((project) =>  project.type === 'mobile');
   const mobileWeb3Projects = translatedReactNativeProjects.filter((project) => project.category === 'web3' && project.type === 'mobile');
 
   const showWeb = activeCategory === 'all' || activeCategory === 'web';

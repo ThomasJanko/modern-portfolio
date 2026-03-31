@@ -547,6 +547,8 @@
         { name: "JavaScript", icon: "/js.svg", link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"},
         { name: "TypeScript", icon: "/ts.svg", link: "https://www.typescriptlang.org"},
         { name: "Python", icon: "/python.svg", link: "https://www.python.org"},
+        { name: "Solidity", icon: "/solidity.webp", link: "https://soliditylang.org"},
+        { name: "C#", icon: "/csharp.webp", link: "https://learn.microsoft.com/en-us/dotnet/csharp/"},
       ]
     },
     {
@@ -581,6 +583,21 @@
       ]
     },
     {
+      title: "Web3",
+      icon: "/blockchain.png",
+      items: [
+        { name: "Solidity", icon: "/solidity.webp", link: "https://soliditylang.org"},
+        { name: "Hardhat", icon: "/hardhat.svg", link: "https://hardhat.org"},
+        { name: "Wagmi", icon: "/wagmi.avif", link: "https://wagmi.sh"},
+        { name: "Ether.js", icon: "/eth.svg", link: "https://ethereum.org/en/developers/docs/ethereum-stack/libraries/libraries-in-javascript/"},
+        { name: "DeFi", icon: "/uniswap.webp", link: "https://uniswap.org"},
+        { name: "NFT Standards", icon: "/nft.webp", link: "https://eips.ethereum.org/EIPS/eip-721"},
+        { name: "OpenZeppelin", icon: "/openzeppelin.webp", link: "https://www.openzeppelin.com"},
+        { name: "IPFS", icon: "/ipfs.webp", link: "https://ipfs.tech"},
+        { name: "Ganache", icon: "/ganache.svg", link: "https://www.trufflesuite.com/ganache"},
+      ]
+    },
+    {
       title: "Tools",
       icon: "/tools.png",
       items: [
@@ -592,8 +609,9 @@
         { name: "VSCode", icon: "/vscode.svg", link: "https://code.visualstudio.com"},
         { name: "Postman", icon: "/postman.svg", link: "https://www.postman.com"},
         { name: "ChatGPT", icon: "/chatgpt.svg", link: "https://chatgpt.com"},
+        {name: "Claude", icon: "/claude.webp", link: "https://www.anthropic.com"},
+        {name: "Cursor", icon: "/cursor.webp", link: "https://www.cursor.com"},
         { name: "MongoDB", icon: "/mongo.webp", link: "https://www.mongodb.com"},
-        { name: "Ganache", icon: "/ganache.svg", link: "https://www.trufflesuite.com/ganache"},
       ]
     }
   ]
