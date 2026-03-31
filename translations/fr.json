@@ -57,7 +57,14 @@
   },
   "experiences": {
     "title": "Mes",
-    "workExperiences": "expériences professionnelles"
+    "workExperiences": "expériences professionnelles",
+    "filters": {
+      "all": "Tous",
+      "stage": "Stage",
+      "alternance": "Alternance",
+      "cdi": "CDI",
+      "formation": "Formation"
+    }
   },
   "approach": {
     "title": "Mon",

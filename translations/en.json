@@ -57,7 +57,14 @@
   },
   "experiences": {
     "title": "My",
-    "workExperiences": "work experiences"
+    "workExperiences": "work experiences",
+    "filters": {
+      "all": "All",
+      "stage": "Internship",
+      "alternance": "Apprenticeship",
+      "cdi": "Permanent",
+      "formation": "Certification"
+    }
   },
   "approach": {
     "title": "My",
