@@ -3,20 +3,45 @@ import React from 'react'
 import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import ShimmerButton from './ui/ShimmerButton'
-import { FaArrowRight } from 'react-icons/fa6'
+import { FaArrowRight, FaMapLocation } from 'react-icons/fa6'
 import Image from 'next/image'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { type PortfolioCategory } from './RecentProjects'
+import { FaMapPin } from 'react-icons/fa';
 
-const Hero = () => {
+type HeroProps = {
+  activeCategory: PortfolioCategory;
+};
+
+const Hero = ({ activeCategory }: HeroProps) => {
   const { t, language } = useLanguage();
-  
-  const cvImage = language === 'fr' 
-    ? '/CV/JANKOWSKI THOMAS CV 2026.png' 
-    : '/CV/JANKOWSKI THOMAS CV - EN.png';
-  
-  const cvPdf = language === 'fr' 
-    ? '/CV/JANKOWSKI THOMAS CV 2025.pdf' 
-    : '/CV/JANKOWSKI THOMAS CV 2025 - EN.pdf';
+
+  const cvAssetsByCategory = {
+    web3: {
+      fr: {
+        image: '/CV/JANKOWSKI THOMAS CV 2026 - Développeur Blockchain.png',
+        pdf: '/CV/JANKOWSKI THOMAS CV 2026 - Développeur Blockchain.pdf',
+      },
+      en: {
+        image: '/CV/JANKOWSKI THOMAS CV 2026 - Développeur Blockchain - EN.png',
+        pdf: '/CV/JANKOWSKI THOMAS CV 2026 - Développeur Blockchain - EN.pdf',
+      },
+    },
+    default: {
+      fr: {
+        image: '/CV/JANKOWSKI THOMAS CV 2026 - Développeur Fullstack.png',
+        pdf: '/CV/JANKOWSKI THOMAS CV 2026 - Développeur Fullstack.pdf',
+      },
+      en: {
+        image: '/CV/JANKOWSKI THOMAS CV - EN.png',
+        pdf: '/CV/JANKOWSKI THOMAS CV 2025 - EN.pdf',
+      },
+    },
+  } as const;
+
+  const languageKey = language === 'fr' ? 'fr' : 'en';
+  const categoryKey = activeCategory === 'web3' ? 'web3' : 'default';
+  const cvAsset = cvAssetsByCategory[categoryKey][languageKey];
   
   return (
     <div className='pb-20 pt-36'>
@@ -38,17 +63,23 @@ const Hero = () => {
             <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>
               {t('hero.description')}
             </p>
+            <div className='flex items-center justify-center gap-3'>
+              <FaMapLocation size={20} color='white'  />
+              <p className='text-center md:tracking-wider  text-sm md:text-lg lg:text-2xl'>
+                {t('hero.location')}
+              </p>
+            </div>
             <div className='flex justify-center my-4'>
               <div className='w-full h-full relative'>
                 <Image
-                  src={cvImage}
+                  src={cvAsset.image}
                   alt='CV'
                   width={500}
                   height={500}
                   sizes="(max-width: 768px) 85vw, 500px"
                   quality={75}
                   className='rounded-md cursor-pointer'
-                  onClick={() => window.open(cvPdf, '_blank')}
+                  onClick={() => window.open(encodeURI(cvAsset.pdf), '_blank')}
                 />
               </div>
             </div>

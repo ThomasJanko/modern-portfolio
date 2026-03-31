@@ -9,7 +9,8 @@
   "hero": {
     "subtitle": "Dynamic Web Magic with Next.JS",
     "title": "Transforming Concepts into Seamless User Experiences",
-    "description": "Hi I'm Thomas Jankowski, a Fullstack Developer based in Paris",
+    "description": "Hi I'm Thomas Jankowski, a Fullstack Developer | TypeScript • Next.js • TailwindCSS • React Native",
+    "location": "Paris, France",
     "showWork": "Show my Work"
   },
   "grid": {

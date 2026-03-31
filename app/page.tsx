@@ -41,7 +41,7 @@ export default function Home() {
       />
       <div className="max-w-7xl w-full">
         <FloatingNav navItems={navItems} />
-        <Hero />
+        <Hero activeCategory={activeCategory} />
         <Grid />
         <RecentProjects activeCategory={activeCategory} />
         <Technologies />
