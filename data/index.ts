@@ -472,7 +472,7 @@
         title: "Développeur dApp - Certification Alyra",
         titleEn: "dApp Developer - Alyra Certification",
         company_name: "Alyra",
-        icon: "/eth.svg",
+        icon: "/alyra.webp",
         iconBg: "#232631",
         date: "Janvier -> Avril 2025",
         dateEn: "January -> April 2025",
