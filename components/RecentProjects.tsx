@@ -1,5 +1,5 @@
 'use client';
-import React, { useMemo, useState } from 'react'
+import React, { useMemo } from 'react'
 import { projects, reactNativeProjects, web3Resources } from '@/data'
 import { PinContainer } from './ui/3d-pin'
 import Image from 'next/image'
@@ -7,20 +7,16 @@ import { ThreeDCard } from './ThreeDCard'
 import { AnimatedTooltip } from './ui/AnimatedTooltip'
 import { useLanguage } from '@/contexts/LanguageContext'
 
-type PortfolioCategory = 'all' | 'web' | 'mobile' | 'web3';
+export type PortfolioCategory = 'all' | 'web' | 'mobile' | 'web3';
 const projectKeys = ['smoldAI', 'spotify', 'imaginify', 'crypto', 'gFormation', 'revochat', 'airbnb', 'netflix', 'sportizer'];
 const reactNativeKeys = ['instagram', 'taskmaster', 'nft'];
 
-const RecentProjects = () => {
-  const { t } = useLanguage();
-  const [activeCategory, setActiveCategory] = useState<PortfolioCategory>('all');
+type RecentProjectsProps = {
+  activeCategory: PortfolioCategory;
+};
 
-  const categories: { id: PortfolioCategory; label: string }[] = [
-    { id: 'all', label: t('projects.categories.all') },
-    { id: 'web', label: t('projects.categories.web') },
-    { id: 'mobile', label: t('projects.categories.mobile') },
-    { id: 'web3', label: t('projects.categories.web3') },
-  ];
+const RecentProjects = ({ activeCategory }: RecentProjectsProps) => {
+  const { t } = useLanguage();
 
   const translatedProjects = useMemo(() => projects.map((project, index) => ({
     ...project,
@@ -55,22 +51,6 @@ const RecentProjects = () => {
         {t('projects.recentSelection')} {' '}
         <span className='text-purple'>{t('projects.recentProjects')}</span>
       </h1>
-
-      <div className='mt-10 flex flex-wrap items-center justify-center gap-3'>
-        {categories.map((category) => (
-          <button
-            key={category.id}
-            onClick={() => setActiveCategory(category.id)}
-            className={`rounded-full border px-5 py-2 text-sm md:text-base transition-colors ${
-              activeCategory === category.id
-                ? 'bg-purple text-white border-purple'
-                : 'border-white/20 text-white/80 hover:border-purple/50 hover:text-white'
-            }`}
-          >
-            {category.label}
-          </button>
-        ))}
-      </div>
 
       {showWeb && (
         <>
@@ -171,7 +151,7 @@ const RecentProjects = () => {
                 <p className='text-sm sm:text-base text-white/80 mt-2 text-center'>{des}</p>
                 <div className='flex flex-wrap justify-center gap-x-20 gap-y-20 mt-10'>
                   {img.map((image, index) => (
-                    <div key={index} className='relative flex flex-col rounded-xl w-[300px] h-auto'>
+                    <div key={`${title}-${image}`} className='relative flex flex-col rounded-xl w-[300px] h-auto'>
                       <div className='w-full h-full relative'>
                         <img
                           src='/images/iphoneX_bg.webp'
