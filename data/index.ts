@@ -75,6 +75,7 @@
     {
       id: 1,
       category: "web",
+      type: "web",
       title: "SmoldAI - AI SasS",
       des: "Application integrating multiple Artificial Intelligences. Capability to generate text, code, images, music, and videos. Connect with OAuth, Stripe payment processing, user management, order management, and subscription management...",
       img: "/images/smoldAI.png",
@@ -91,6 +92,7 @@
     {
       id: 2,
       category: "web",
+      type: "web",
       title: "Spotify Clone - Music Player",
       des: "Reproduction of the Spotify streaming site. Music upload via AWS S3, music converter to mp3, playlist creation, adding music to a playlist, music playback, music search, simultaneous listening via sockets...",
       img: "/images/spotify.png",
@@ -107,6 +109,7 @@
     {
       id: 3,
       category: "web",
+      type: "web",
       title: "Imaginify - AI Image SaaS",
       des: "Images design using AI features and a payments and credits system using the latest tech stack.",
       img: "/images/imaginify.png",
@@ -124,6 +127,7 @@
     {
       id: 4,
       category: "web3",
+      type: "web",
       title: "Crypto-app - Blockchain Application",
       des: "Cryptocurrency transfer application. Allows account creation, authentication, balance viewing, money transfers, transaction history viewing, and sending messages within a transaction...",
       img: "/images/crypto-app.png",
@@ -140,6 +144,7 @@
     {
       id: 5,
       category: "web",
+      type: "web",
       title: "G-Formation - Training Platform",
       des: "Implementation of an interconnected web interface with the aim of offering training relating to the GESTIMUM ERP.",
       img: "/images/g-formation.png",
@@ -155,7 +160,8 @@
     },
     {
       id: 6,
-      category: "web3",
+      category: "web",
+      type: "web",
       title: "Revochat - Chat App",
       des: "Developed a Secure App Chat appllication, similar to discord.",
       img: "/images/revochat.png",
@@ -173,6 +179,7 @@
     {
       id: 7,
       category: "web",
+      type: "web",
       title: "AirBnb clone - Booking Platform",
       des: "Airbnb clone. Allows users to create an account, search for accommodation, book accommodation, view booking history, and manage their account...",
       img: "/images/airbnb.png",
@@ -188,6 +195,7 @@
     {
       id: 8,
       category: "web",
+      type: "web",
       title: "Netflix clone - Streaming Platform",
       des: "Reproduction of the Netflix streaming site. Use of Next.js and the opensource themoviedb api. Creation of an authentication page and movie retrieval services...",
       img: "/images/netflix.png",
@@ -203,6 +211,7 @@
     {
       id: 9,
       category: "web",
+      type: "web",
       title: "Sportizer - Basketball Scoreboard",
       des: "Dynamic and ergonomic basketball scoreboard application to replace old scoreboards in gyms. Created a 'remote' interface and a 'screen' interface to control all match variables...",
       img: "/images/sportizer.png",
@@ -223,6 +232,7 @@
     {
       id: 1,
       category: "mobile",
+      type: "mobile",
       title: "Instagram Clone - Social Media",
       des: "Reproduction of the Instagram social network. Allows users to create an account, post photos, view photos, and manage their account...",
       img: ["/images/insta-native_1.jpg", "/images/insta-native_2.jpg"],
@@ -238,6 +248,7 @@
     {
       id: 2,
       category: "mobile",
+      type: "mobile",
       title: "TaskMaster - Task Manager",
       des: "Task manager application. Allows users to create tasks, view task, manage it and complete it.",
       img: ["/images/taskmaster_1.jpg", "/images/taskmaster_2.jpg"],
@@ -251,6 +262,7 @@
     {
       id: 3,
       category: "web3",
+      type: "mobile",
       title: "NFT Marketplace - Blockchain",
       des: "NFT Marketplace. Allows users to see NFTs, and place bids on them.",
       img: ["/images/react-native-nft_1.jpg", "/images/react-native-nft_2.jpg"],

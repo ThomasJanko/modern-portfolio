@@ -5,6 +5,7 @@ import { PinContainer } from './ui/3d-pin'
 import Image from 'next/image'
 import { ThreeDCard } from './ThreeDCard'
 import { AnimatedTooltip } from './ui/AnimatedTooltip'
+import MobileProjectsShowcase from './MobileProjectsShowcase'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 export type PortfolioCategory = 'all' | 'web' | 'mobile' | 'web3';
@@ -36,10 +37,10 @@ const RecentProjects = ({ activeCategory }: RecentProjectsProps) => {
     des: resource.lang === 'EN' ? t('projects.cv.enDescription') : t('projects.cv.frDescription'),
   })), [t]);
 
-  const webProjects = translatedProjects.filter((project) => project.category === 'web');
-  const web3Projects = translatedProjects.filter((project) => project.category === 'web3');
-  const mobileProjects = translatedReactNativeProjects.filter((project) => project.category === 'mobile');
-  const mobileWeb3Projects = translatedReactNativeProjects.filter((project) => project.category === 'web3');
+  const webProjects = translatedProjects.filter((project) => project.category === 'web' && project.type === 'web');
+  const web3Projects = translatedProjects.filter((project) => project.category === 'web3' && project.type === 'web');
+  const mobileProjects = translatedReactNativeProjects.filter((project) => project.category === 'mobile' && project.type === 'mobile');
+  const mobileWeb3Projects = translatedReactNativeProjects.filter((project) => project.category === 'web3' && project.type === 'mobile');
 
   const showWeb = activeCategory === 'all' || activeCategory === 'web';
   const showMobile = activeCategory === 'all' || activeCategory === 'mobile';
@@ -107,16 +108,11 @@ const RecentProjects = ({ activeCategory }: RecentProjectsProps) => {
           </div>
 
           {!!mobileWeb3Projects.length && (
-            <div className='flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-2'>
-              {mobileWeb3Projects.map(({ id, title, des, iconLists }) => (
-                <div key={id} className='w-[80vw] sm:w-[570px] rounded-3xl border border-white/15 p-6 bg-black-200'>
-                  <h3 className='font-bold text-xl'>{title}</h3>
-                  <p className='text-white/80 mt-2'>{des}</p>
-                  <div className='mt-6'>
-                    <AnimatedTooltip items={iconLists} />
-                  </div>
-                </div>
-              ))}
+            <div className='mt-2'>
+              <div className='w-full text-center'>
+                <p className='text-sm uppercase tracking-[0.2em] text-purple/90'>Mobile Web3 App</p>
+              </div>
+              <MobileProjectsShowcase items={mobileWeb3Projects} />
             </div>
           )}
 
@@ -144,43 +140,7 @@ const RecentProjects = ({ activeCategory }: RecentProjectsProps) => {
           <h2 className='heading mt-12'>
             <span className='text-purple'>{t('projects.sections.mobile')}</span>
           </h2>
-          <div className='relative flex flex-wrap dark:bg-black-100 bg-grid-black/[0.2] dark:bg-grid-white/[0.03] bg-opacity-10 bg-white items-center justify-center p-4 gap-x-24 gap-y-20 mt-6'>
-            {mobileProjects.map(({ id, title, des, img, iconLists }) => (
-              <div key={id} className='flex flex-col items-center justify-center'>
-                <span className='font-bold text-xl sm:text-2xl text-center'>{title}</span>
-                <p className='text-sm sm:text-base text-white/80 mt-2 text-center'>{des}</p>
-                <div className='flex flex-wrap justify-center gap-x-20 gap-y-20 mt-10'>
-                  {img.map((image, index) => (
-                    <div key={`${title}-${image}`} className='relative flex flex-col rounded-xl w-[300px] h-auto'>
-                      <div className='w-full h-full relative'>
-                        <img
-                          src='/images/iphoneX_bg.webp'
-                          alt='bg-img'
-                          className='w-full h-full object-center rounded-3xl'
-                          style={{ transform: `rotate(${index % 2 === 0 ? -3 : 3}deg)` }}
-                        />
-                        <img
-                          src={image}
-                          alt={title}
-                          className='w-[90%] h-[96%] absolute left-4 top-3 object-center rounded-3xl'
-                          style={{
-                            transform: `rotate(${index % 2 === 0 ? -3 : 3}deg)`,
-                            borderRadius: '36px',
-                          }}
-                        />
-                      </div>
-                      <div
-                        className={`flex justify-center mt-4 items-center ${index % 2 === 0 ? 'ml-14' : 'mr-6'}`}
-                        style={{ transform: `rotate(${index % 2 === 0 ? -3 : 3}deg)` }}
-                      >
-                        <AnimatedTooltip items={iconLists} />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
+          <MobileProjectsShowcase items={mobileProjects} />
         </>
       )}
     </div>
