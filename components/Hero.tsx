@@ -8,6 +8,7 @@ import Image from 'next/image'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { type PortfolioCategory } from './RecentProjects'
 import { FaMapPin } from 'react-icons/fa';
+import { Tilt } from 'react-tilt';
 
 type HeroProps = {
   activeCategory: PortfolioCategory;
@@ -63,7 +64,7 @@ const Hero = ({ activeCategory }: HeroProps) => {
             <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>
               {t('hero.description')}
             </p>
-            <div className='flex items-center justify-center gap-3'>
+            <div className='flex items-center justify-center gap-3 mb-4'>
               <FaMapLocation size={20} color='white'  />
               <p className='text-center md:tracking-wider  text-sm md:text-lg lg:text-2xl'>
                 {t('hero.location')}
@@ -71,6 +72,9 @@ const Hero = ({ activeCategory }: HeroProps) => {
             </div>
             <div className='flex justify-center my-4'>
               <div className='w-full h-full relative'>
+                <Tilt
+                  className='w-full h-full relative'
+                >
                 <Image
                   src={cvAsset.image}
                   alt='CV'
@@ -81,6 +85,7 @@ const Hero = ({ activeCategory }: HeroProps) => {
                   className='rounded-md cursor-pointer'
                   onClick={() => window.open(encodeURI(cvAsset.pdf), '_blank')}
                 />
+                </Tilt>
               </div>
             </div>
             <a href="#about">
