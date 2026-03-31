@@ -104,10 +104,11 @@ const ExperienceCard = ({ experience }: { experience: Experience }) => {
     contentStyle={{ background: '#1d1836', color: '#fff' }}
     contentArrowStyle={{ borderRight: '7px solid #232631' }}
     date={experience.date}
+    dateClassName='text-white-100 text-[14px] tracking-wider mx-4'
     iconStyle={{ background: experience.iconBg }}
     icon={
       <div className='flex justify-center items-center w-full h-full'>
-        <img src={experience.icon} alt={experience.company_name} className='w-[70%] h-[70%] object-contain rounded-full' />
+        <img src={experience.icon} alt={experience.company_name} className='w-[80%] h-[80%] object-contain rounded-full' />
       </div>
     }
   >
