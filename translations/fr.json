@@ -19,8 +19,8 @@
     "techStack": "Ma stack technique",
     "techStackDesc": "J'essaie constamment de m'améliorer",
     "techEnthusiast": "Passionné de technologie avec une passion pour le développement.",
-    "currentProject": "Actuellement en train de construire une application SaaS IA avec un système de paiement.",
-    "currentProjectDesc": "Les Détails",
+    "currentProject": "Actuellement en train de construire Wedding-Hat, un SaaS d'organisation de mariage tout-en-un avec RSVP boosté par une IA MCP.",
+    "currentProjectDesc": "WeddingGPT peut faire du CRUD directement dans l'application",
     "startProject": "Voulez-vous démarrer un projet ensemble ?",
     "copyEmail": "Copier mon adresse e-mail",
     "emailCopied": "E-mail copié !"
@@ -119,6 +119,10 @@
     "sportizer": {
       "title": "Sportizer - Tableau de Score de Basketball",
       "description": "Application de tableau de score de basketball dynamique et ergonomique pour remplacer les anciens tableaux de score dans les salles de sport. Création d'une interface 'télécommande' et d'une interface 'écran' pour contrôler toutes les variables du match..."
+    },
+    "weddinghat": {
+      "title": "Wedding-Hat - SaaS d'Organisation de Mariage",
+      "description": "SaaS d'organisation de mariage tout-en-un avec RSVP boosté par une IA MCP: WeddingGPT peut faire du CRUD directement dans l'application. Inclut site de mariage, organisation, gestion des rôles, plan de table, cartes de placement, playlists, gestion invités/prestataires et budgets."
     },
     "instagram": {
       "title": "Instagram Clone - Réseau Social",

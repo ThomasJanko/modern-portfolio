@@ -9,7 +9,7 @@ import MobileProjectsShowcase from './MobileProjectsShowcase'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 export type PortfolioCategory = 'all' | 'web' | 'mobile' | 'web3';
-const projectKeys = ['smoldAI', 'spotify', 'imaginify', 'crypto', 'gFormation', 'revochat', 'airbnb', 'netflix', 'sportizer'];
+const projectKeys = ['smoldAI', 'spotify', 'imaginify', 'crypto', 'gFormation', 'revochat', 'airbnb', 'netflix', 'sportizer', 'weddinghat'];
 const reactNativeKeys = ['instagram', 'taskmaster', 'nft'];
 
 type RecentProjectsProps = {
@@ -23,13 +23,13 @@ const RecentProjects = ({ activeCategory }: RecentProjectsProps) => {
     ...project,
     title: t(`projectsData.${projectKeys[index]}.title`),
     des: t(`projectsData.${projectKeys[index]}.description`)
-  })), [t]);
+  })).sort((a, b) => b.id - a.id), [t]);
 
   const translatedReactNativeProjects = useMemo(() => reactNativeProjects.map((project, index) => ({
     ...project,
     title: t(`projectsData.${reactNativeKeys[index]}.title`),
     des: t(`projectsData.${reactNativeKeys[index]}.description`)
-  })), [t]);
+  })).sort((a, b) => b.id - a.id), [t]);
 
   const translatedWeb3Resources = useMemo(() => web3Resources.map((resource) => ({
     ...resource,

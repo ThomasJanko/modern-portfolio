@@ -73,7 +73,7 @@
   
   export const projects = [
     {
-      id: 1,
+      id: 9,
       category: "web",
       type: "web",
       title: "SmoldAI - AI SasS",
@@ -90,7 +90,7 @@
       demo: "https://smold-ai.thomas-jan.fr",
     },
     {
-      id: 2,
+      id: 8,
       category: "web",
       type: "web",
       title: "Spotify Clone - Music Player",
@@ -107,7 +107,7 @@
       demo: "https://spotify-front-end.thomas-jan.fr",
     },
     {
-      id: 3,
+      id: 7,
       category: "web",
       type: "web",
       title: "Imaginify - AI Image SaaS",
@@ -125,7 +125,7 @@
       demo: "https://imaginify.thomas-jan.fr",
     },
     {
-      id: 4,
+      id: 6,
       category: "web3",
       type: "web",
       title: "Crypto-app - Blockchain Application",
@@ -159,7 +159,7 @@
       demo: "https://g-formation.gestimum.com",
     },
     {
-      id: 6,
+      id: 4,
       category: "web",
       type: "web",
       title: "Revochat - Chat App",
@@ -177,7 +177,7 @@
     },
     
     {
-      id: 7,
+      id: 3,
       category: "web",
       type: "web",
       title: "AirBnb clone - Booking Platform",
@@ -193,7 +193,7 @@
       demo: "https://airbnb.thomas-jan.fr",
     },
     {
-      id: 8,
+      id: 2,
       category: "web",
       type: "web",
       title: "Netflix clone - Streaming Platform",
@@ -209,7 +209,7 @@
       demo: "https://g-formation.gestimum.com",
     },
     {
-      id: 9,
+      id: 1,
       category: "web",
       type: "web",
       title: "Sportizer - Basketball Scoreboard",
@@ -225,12 +225,29 @@
       link: "",
       demo: "",
     },
+    {
+      id: 10,
+      category: "web",
+      type: "web",
+      title: "Wedding-Hat - Wedding Organization SaaS",
+      des: "All-in-one wedding planning SaaS with RSVP boosted with MCP AI assistant: WeddingGPT can directly CRUD data in-app. Includes website builder, organization workflows, role management, table plan, seating cards, playlists, guest/vendor management, and budgets.",
+      img: "/images/weddinghat-dashboard.png",
+      iconLists: [
+        { name: "NextJs", icon: "/next.svg", link: "https://nextjs.org" },
+        { name: "TypeScript", icon: "/ts.svg", link: "https://www.typescriptlang.org" },
+        { name: "TailwindCSS", icon: "/tailwindcss.svg", link: "https://tailwindcss.com" },
+        { name: "Supabase", icon: "/supabase.webp", link: "https://supabase.com" },
+        { name: "OpenAI / MCP", icon: "/chatgpt.svg", link: "https://modelcontextprotocol.io" },
+      ],
+      link: "https://github.com/SaaS-ThomasJanko/wedding-saas",
+      demo: "https://weddinghat.thomas-jan.fr/",
+    },
     
   ];
 
   export const reactNativeProjects = [
     {
-      id: 1,
+      id: 3,
       category: "mobile",
       type: "mobile",
       title: "Instagram Clone - Social Media",
@@ -260,7 +277,7 @@
       demo: "",
     },
     {
-      id: 3,
+      id: 1,
       category: "web3",
       type: "mobile",
       title: "NFT Marketplace - Blockchain",
