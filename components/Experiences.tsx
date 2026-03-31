@@ -11,6 +11,7 @@ type ExperienceType = 'all' | 'stage' | 'alternance' | 'cdi';
 const Experiences = () => {
   const { t, language } = useLanguage();
   const [activeType, setActiveType] = useState<ExperienceType>('all');
+  const [reverseOrder, setReverseOrder] = useState(false);
 
   const getContractTypeLabel = (type?: string) => {
     if (type === 'stage') return t('experiences.filters.stage');
@@ -36,6 +37,8 @@ const Experiences = () => {
     }))
     .filter((experience) => activeType === 'all' ? true : experience.type === activeType);
 
+  const orderedExperiences = reverseOrder ? [...mappedExperiences].reverse() : mappedExperiences;
+
   return (
     <div className='py-20' id="experiences">
       <h1 className='heading'>
@@ -56,11 +59,19 @@ const Experiences = () => {
           </button>
         ))}
       </div>
+      <div className='mt-4 flex justify-center'>
+        <button
+          onClick={() => setReverseOrder((prev) => !prev)}
+          className='rounded-full border border-white/20 px-5 py-2 text-sm md:text-base text-white/80 hover:border-purple/50 hover:text-white transition-colors'
+        >
+          {reverseOrder ? t('experiences.order.oldestFirst') : t('experiences.order.latestFirst')}
+        </button>
+      </div>
       <div>
       <TracingBeam className="px-6">
         <div className='mt-20 flex flex-col'>
           <VerticalTimeline>
-            {mappedExperiences.map((experience) => (
+            {orderedExperiences.map((experience) => (
               <ExperienceCard key={`${experience.date}-${experience.company_name}`} experience={experience} />
             ))}
           </VerticalTimeline>

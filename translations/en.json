@@ -64,6 +64,10 @@
       "alternance": "Apprenticeship",
       "cdi": "Permanent",
       "formation": "Certification"
+    },
+    "order": {
+      "latestFirst": "Latest first",
+      "oldestFirst": "Oldest first"
     }
   },
   "approach": {

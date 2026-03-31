@@ -64,6 +64,10 @@
       "alternance": "Alternance",
       "cdi": "CDI",
       "formation": "Formation"
+    },
+    "order": {
+      "latestFirst": "Plus récent d'abord",
+      "oldestFirst": "Plus ancien d'abord"
     }
   },
   "approach": {
