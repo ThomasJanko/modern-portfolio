@@ -30,7 +30,25 @@
     "moreProjects": "More projects",
     "onTheWay": "on the way",
     "mobileApps": "And some",
-    "mobileApp": "Mobile App"
+    "mobileApp": "Mobile App",
+    "categories": {
+      "all": "All",
+      "web": "Web",
+      "mobile": "Mobile",
+      "web3": "Web3"
+    },
+    "sections": {
+      "web": "Web Projects",
+      "mobile": "Mobile Projects",
+      "web3": "Web3 Projects"
+    },
+    "cv": {
+      "enTitle": "Blockchain Developer CV 2026 (English)",
+      "frTitle": "Blockchain Developer CV 2026 (French)",
+      "enDescription": "Full profile in English with blockchain, Web3, and fullstack achievements.",
+      "frDescription": "Profil complet en français avec parcours blockchain, Web3 et fullstack.",
+      "open": "Open CV"
+    }
   },
   "technologies": {
     "title": "My Top",

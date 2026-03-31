@@ -30,7 +30,25 @@
     "moreProjects": "Plus de projets",
     "onTheWay": "en cours",
     "mobileApps": "Et quelques",
-    "mobileApp": "Applications Mobiles"
+    "mobileApp": "Applications Mobiles",
+    "categories": {
+      "all": "Tous",
+      "web": "Web",
+      "mobile": "Mobile",
+      "web3": "Web3"
+    },
+    "sections": {
+      "web": "Projets Web",
+      "mobile": "Projets Mobile",
+      "web3": "Projets Web3"
+    },
+    "cv": {
+      "enTitle": "CV Développeur Blockchain 2026 (Anglais)",
+      "frTitle": "CV Développeur Blockchain 2026 (Français)",
+      "enDescription": "Profil complet en anglais avec parcours blockchain, Web3 et fullstack.",
+      "frDescription": "Profil complet en français avec parcours blockchain, Web3 et fullstack.",
+      "open": "Ouvrir le CV"
+    }
   },
   "technologies": {
     "title": "Mes",

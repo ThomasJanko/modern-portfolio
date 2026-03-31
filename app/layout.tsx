@@ -8,8 +8,8 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "ThomasJanko Portfolio",
-  description: "Modern & minimalist ThomasJanko Portfolio built with Next.js",
+  title: "Thomas JANKOWSKI",
+  description: "Fullstack Developer | TypeScript • Next.js • TailwindCSS • React Native",
 };
 
 export default function RootLayout({
@@ -18,12 +18,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
       <ThemeProvider
         attribute="class"
         defaultTheme="dark"
-        enableSystem
+        forcedTheme="dark"
+        enableSystem={false}
         disableTransitionOnChange
       >
         <LanguageProvider>

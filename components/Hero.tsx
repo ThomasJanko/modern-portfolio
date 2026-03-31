@@ -5,14 +5,13 @@ import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import ShimmerButton from './ui/ShimmerButton'
 import { FaArrowRight } from 'react-icons/fa6'
 import Image from 'next/image'
-import { Tilt } from 'react-tilt'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 const Hero = () => {
   const { t, language } = useLanguage();
   
   const cvImage = language === 'fr' 
-    ? '/CV/JANKOWSKI THOMAS CV 2025.png' 
+    ? '/CV/JANKOWSKI THOMAS CV 2026.png' 
     : '/CV/JANKOWSKI THOMAS CV - EN.png';
   
   const cvPdf = language === 'fr' 
@@ -39,12 +38,20 @@ const Hero = () => {
             <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>
               {t('hero.description')}
             </p>
-            <Tilt className='flex justify-center my-4'>
+            <div className='flex justify-center my-4'>
               <div className='w-full h-full relative'>
-                <Image src={cvImage} alt='CV' width={500} height={500} className='rounded-md cursor-pointer' 
-                onClick={() => window.open(cvPdf, '_blank')} />
+                <Image
+                  src={cvImage}
+                  alt='CV'
+                  width={500}
+                  height={500}
+                  sizes="(max-width: 768px) 85vw, 500px"
+                  quality={75}
+                  className='rounded-md cursor-pointer'
+                  onClick={() => window.open(cvPdf, '_blank')}
+                />
               </div>
-            </Tilt>
+            </div>
             <a href="#about">
               <ShimmerButton 
                 title={t('hero.showWork')}
