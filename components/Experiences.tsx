@@ -4,6 +4,7 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import { experiences } from '@/data';
 import { TracingBeam } from './ui/TracingBeam';
 import { useLanguage } from '@/contexts/LanguageContext';
+import Image from 'next/image';
 // import 'react-vertical-timeline-component/style.min.css'
 
 type ExperienceType = 'all' | 'stage' | 'alternance' | 'cdi';
@@ -108,7 +109,7 @@ const ExperienceCard = ({ experience }: { experience: Experience }) => {
     iconStyle={{ background: experience.iconBg }}
     icon={
       <div className='flex justify-center items-center w-full h-full'>
-        <img src={experience.icon} alt={experience.company_name} className='w-[80%] h-[80%] object-contain rounded-full' />
+        <Image src={experience.icon} alt={experience.company_name} width={100} height={100} className='object-contain rounded-full' />
       </div>
     }
   >

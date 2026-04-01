@@ -4,6 +4,7 @@ import ShimmerButton from './ui/ShimmerButton'
 import { FaLocationArrow } from 'react-icons/fa6'
 import { socialMedia } from '@/data'
 import { useLanguage } from '@/contexts/LanguageContext'
+import Image from 'next/image';
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -35,7 +36,7 @@ const Footer = () => {
             <div className='flex items-center md:gap-3 gap-6'>
                 {socialMedia.map((social) => (
                     <div key={social.id} className='w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 rounded-lg border border-black-300 bg-black-200'>
-                        <img
+                        <Image
                             src={social.img}
                             alt={social.id.toString()}
                             width={20}

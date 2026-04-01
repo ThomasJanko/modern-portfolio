@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { AnimatedTooltip } from './ui/AnimatedTooltip';
 
 type MobileProject = {
@@ -25,15 +26,19 @@ const MobileProjectsShowcase = ({ items }: MobileProjectsShowcaseProps) => {
             {img.map((image, index) => (
               <div key={`${title}-${image}`} className='relative flex flex-col rounded-xl w-[300px] h-auto'>
                 <div className='w-full h-full relative'>
-                  <img
+                  <Image
                     src='/images/iphoneX_bg.webp'
+                    width={1000}
+                    height={1000}
                     alt='bg-img'
                     className='w-full h-full object-center rounded-3xl'
                     style={{ transform: `rotate(${index % 2 === 0 ? -3 : 3}deg)` }}
                   />
-                  <img
+                  <Image
                     src={image}
                     alt={title}
+                    width={1000}
+                    height={1000}
                     className='w-[90%] h-[96%] absolute left-4 top-3 object-center rounded-3xl'
                     style={{
                       transform: `rotate(${index % 2 === 0 ? -3 : 3}deg)`,

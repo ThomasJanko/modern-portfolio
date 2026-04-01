@@ -3,6 +3,7 @@ import { technologies } from '@/data'
 import React from 'react'
 import { Button } from './ui/MovingBorder'
 import { useLanguage } from '@/contexts/LanguageContext'
+import Image from 'next/image';
 
 const Technologies = () => {
   const { t } = useLanguage();
@@ -24,7 +25,9 @@ const Technologies = () => {
                 >
                     <div className='flex flex-col lg:flex-row items-center p-3 py-6 md:p-5 lg:p-10 gap-2'>
                         <div className='flex items-center lg:flex-col'>
-                            <img 
+                            <Image 
+                                width={100}
+                                height={100}
                                 src={tech.icon} 
                                 alt={tech.title} 
                                 className='w-16 md:w-20 lg:w-32' 
@@ -43,7 +46,9 @@ const Technologies = () => {
                                         className='hover:scale-110 transition-all duration-200'
                                         onClick={() => window.open(item.link, '_blank')}
                                     >
-                                        <img
+                                        <Image
+                                            width={100}
+                                            height={100}
                                             src={item.icon}
                                             alt={item.name}
                                             className='w-10 h-10 object-center'

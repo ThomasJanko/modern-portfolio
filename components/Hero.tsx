@@ -20,22 +20,22 @@ const Hero = ({ activeCategory }: HeroProps) => {
   const cvAssetsByCategory = {
     web3: {
       fr: {
-        image: '/CV/JANKOWSKI THOMAS CV 2026 - Développeur Blockchain.png',
-        pdf: '/CV/JANKOWSKI THOMAS CV 2026 - Développeur Blockchain.pdf',
+        image: '/CV/JANKOWSKI_THOMAS_CV_2026_blockchain.png',
+        pdf: '/CV/JANKOWSKI_THOMAS_CV_2026_blockchain.pdf',
       },
       en: {
-        image: '/CV/JANKOWSKI THOMAS CV 2026 - Développeur Blockchain - EN.png',
-        pdf: '/CV/JANKOWSKI THOMAS CV 2026 - Développeur Blockchain - EN.pdf',
+        image: '/CV/JANKOWSKI_THOMAS_CV_2026_blockchain_en.png',
+        pdf: '/CV/JANKOWSKI_THOMAS_CV_2026_blockchain_en.pdf',
       },
     },
     default: {
       fr: {
-        image: '/CV/JANKOWSKI THOMAS CV 2026 - Développeur Fullstack.png',
-        pdf: '/CV/JANKOWSKI THOMAS CV 2026 - Développeur Fullstack.pdf',
+        image: '/CV/JANKOWSKI_THOMAS_CV_2026_fullstack.png',
+        pdf: '/CV/JANKOWSKI_THOMAS_CV_2026_fullstack.pdf',
       },
       en: {
-        image: '/CV/JANKOWSKI THOMAS CV - EN.png',
-        pdf: '/CV/JANKOWSKI THOMAS CV 2025 - EN.pdf',
+        image: '/CV/JANKOWSKI_THOMAS_CV_fullstack_en.png',
+        pdf: '/CV/JANKOWSKI_THOMAS_CV_fullstack_en.pdf',
       },
     },
   } as const;

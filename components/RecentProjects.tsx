@@ -86,9 +86,11 @@ const RecentProjects = ({ activeCategory }: RecentProjectsProps) => {
                 <PinContainer title={demo || link} href={demo || link}>
                   <div className='relative flex items-center justify-center sm:w-[570px] sm:h-[40vh] w-[80vw] overflow-hidden h-[30vh] mb-10'>
                     <div className='relative w-full h-full overflow-hidden lg:rounded-3xl'>
-                      <img src="/bg.png" alt="bg-img" />
+                      <Image src="/bg.png" alt="bg-img" width={1000} height={1000} />
                     </div>
-                    <img
+                    <Image
+                      width={1000}
+                      height={1000}
                       src={img}
                       alt={title}
                       className='z-40 absolute bottom-0 w-5/6 h-5/6 object-center rounded-lg rotate-3 translate-y-4'
