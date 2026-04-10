@@ -84,7 +84,11 @@ const RecentProjects = ({ activeCategory }: RecentProjectsProps) => {
             {web3Projects.map(({ id, title, des, link, img, iconLists, demo }) => (
               <div key={id} className='sm:h-[41rem] lg:min-h-[32.5rem] h-[32rem] flex items-center justify-center sm:w-[570px] w-[80vw]'>
                 <PinContainer title={demo || link} href={demo || link}>
-                  <div className='relative flex items-center justify-center sm:w-[570px] sm:h-[40vh] w-[80vw] overflow-hidden h-[30vh] mb-10'>
+                  <button
+                    type='button'
+                    className='relative flex items-center justify-center sm:w-[570px] sm:h-[40vh] w-[80vw] overflow-hidden h-[30vh] mb-10 cursor-pointer'
+                    onClick={() => window.open(demo || link, '_blank')}
+                  >
                     <div className='relative w-full h-full overflow-hidden lg:rounded-3xl'>
                       <Image src="/bg.png" alt="bg-img" width={1000} height={1000} />
                     </div>
@@ -95,13 +99,20 @@ const RecentProjects = ({ activeCategory }: RecentProjectsProps) => {
                       alt={title}
                       className='z-40 absolute bottom-0 w-5/6 h-5/6 object-center rounded-lg rotate-3 translate-y-4'
                     />
-                  </div>
+                  </button>
                   <h3 className='font-bold lg:text-2xl md:text-xl text-base line-clamp-1'>{title}</h3>
                   <p className='lg:text-xl lg:font-normal font-light text-sm line-clamp-2 mt-2'>{des}</p>
                   <div className='flex items-center justify-between mt-7 mb-3'>
                     <AnimatedTooltip items={iconLists} />
                     <div className='flex justify-center items-center pr-4'>
-                      <Image src='/git.svg' alt='github' width={40} height={40} />
+                      <Image
+                        src='/git.svg'
+                        alt='github'
+                        width={40}
+                        height={40}
+                        className='cursor-pointer'
+                        onClick={() => window.open(link, '_blank')}
+                      />
                     </div>
                   </div>
                 </PinContainer>
