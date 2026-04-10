@@ -128,6 +128,10 @@
       "title": "Wedding-Hat - Wedding Organization SaaS",
       "description": "All-in-one wedding planning SaaS with RSVP boosted with MCP AI assistant: WeddingGPT can directly CRUD data in-app. Includes website builder, organization workflows, role management, table plan, seating cards, playlists, guest/vendor management, and budgets."
     },
+    "stakingdapp": {
+      "title": "Staking DApp - KZN Token",
+      "description": "Staking dApp for KZN token with wallet connection, staking flows, and on-chain interactions using Wagmi, Solidity (Sepolia), Next.js, Tailwind CSS, Shadcn UI, and custom views."
+    },
     "instagram": {
       "title": "Instagram Clone - Social Media",
       "description": "Reproduction of the Instagram social network. Allows users to create an account, post photos, view photos, and manage their account..."

@@ -9,7 +9,7 @@ import MobileProjectsShowcase from './MobileProjectsShowcase'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 export type PortfolioCategory = 'all' | 'web' | 'mobile' | 'web3';
-const projectKeys = ['smoldAI', 'spotify', 'imaginify', 'crypto', 'gFormation', 'revochat', 'airbnb', 'netflix', 'sportizer', 'stocksapp', 'weddinghat'];
+const projectKeys = ['smoldAI', 'spotify', 'imaginify', 'crypto', 'gFormation', 'revochat', 'airbnb', 'netflix', 'sportizer', 'stocksapp', 'weddinghat', 'stakingdapp'];
 const reactNativeKeys = ['instagram', 'taskmaster', 'nft'];
 
 type RecentProjectsProps = {
@@ -89,8 +89,8 @@ const RecentProjects = ({ activeCategory }: RecentProjectsProps) => {
                       <Image src="/bg.png" alt="bg-img" width={1000} height={1000} />
                     </div>
                     <Image
-                      width={1000}
-                      height={1000}
+                      width={2000}
+                      height={2000}
                       src={img}
                       alt={title}
                       className='z-40 absolute bottom-0 w-5/6 h-5/6 object-center rounded-lg rotate-3 translate-y-4'

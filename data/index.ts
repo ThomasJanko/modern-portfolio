@@ -259,6 +259,24 @@
       link: "https://github.com/SaaS-ThomasJanko/wedding-saas",
       demo: "https://weddinghat.thomas-jan.fr/",
     },
+    {
+      id: 12,
+      category: "web3",
+      type: "web",
+      title: "Staking DApp - KZN Token",
+      des: "Staking dApp for KZN token with wallet connection, staking flows, and on-chain interactions using Wagmi, Solidity (Sepolia), Next.js, Tailwind CSS, Shadcn UI, and custom views.",
+      img: "/images/staking.png",
+      iconLists: [
+        { name: "NextJs", icon: "/next.svg", link: "https://nextjs.org" },
+        { name: "Wagmi", icon: "/wagmi.avif", link: "https://wagmi.sh" },
+        { name: "Solidity", icon: "/solidity.webp", link: "https://soliditylang.org" },
+        { name: "Sepolia", icon: "/eth.svg", link: "https://sepolia.dev" },
+        { name: "TailwindCSS", icon: "/tailwindcss.svg", link: "https://tailwindcss.com" },
+        { name: "Shadcn UI", icon: "/shadcn.png", link: "https://ui.shadcn.com/" },
+      ],
+      link: "https://github.com/ThomasJanko-Blockchain/kzn-staking-dapp",
+      demo: "https://staking-dapp.thomas-jan.fr",
+    },
     
   ];
 
