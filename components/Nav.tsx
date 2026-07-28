@@ -25,7 +25,7 @@ const Nav = () => {
           <LanguageSwitcher />
 
           <a
-            href="mailto:thomas78125@gmail.com"
+            href="mailto:thomas.jankowski.dev@gmail.com"
             className="hidden rounded-sm bg-accent px-4 py-[9px] text-[13px] font-medium text-ivory transition-colors hover:bg-accent-dark hover:text-ivory hover:no-underline sm:inline-block md:px-[22px] md:py-[10px] md:text-sm"
           >
             {t('nav.cta')}

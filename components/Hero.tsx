@@ -21,7 +21,7 @@ const Hero = () => {
         </p>
         <div className="flex flex-col gap-3 sm:flex-row">
           <a
-            href="mailto:thomas78125@gmail.com"
+            href="mailto:thomas.jankowski.dev@gmail.com"
             className="rounded-sm bg-accent px-7 py-4 text-center text-[15px] font-medium text-ivory transition-colors hover:bg-accent-dark hover:text-ivory hover:no-underline md:px-8 md:text-base"
           >
             {t('hero.ctaPrimary')}

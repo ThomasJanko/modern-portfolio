@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Charte graphique — Thomas Jankowski</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Work+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Work Sans', sans-serif; }
+  .intro { max-width: 860px; margin: 0 auto; padding: 96px 40px 64px; text-align: center; }
+  .intro .kicker { font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #8a8578; margin-bottom: 20px; }
+  .intro h1 { font-family: 'Spectral', serif; font-size: 40px; font-weight: 500; color: #1C1A17; margin-bottom: 18px; }
+  .intro p { font-size: 16px; line-height: 1.7; color: #57534a; }
+
+  .direction { padding: 96px 40px 112px; }
+  .direction-inner { max-width: 1040px; margin: 0 auto; }
+
+  .label-row { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 56px; flex-wrap: wrap; gap: 12px; }
+  .label-row .tag { font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; }
+  .label-row .name { font-size: 15px; }
+
+  .headline { font-size: 56px; font-weight: 500; line-height: 1.1; margin-bottom: 20px; letter-spacing: -0.01em; }
+  .subline { font-size: 18px; margin-bottom: 12px; }
+  .mood { font-size: 15px; font-style: italic; max-width: 560px; line-height: 1.6; margin-bottom: 64px; }
+
+  .swatches { display: flex; gap: 28px; flex-wrap: wrap; margin-bottom: 56px; }
+  .swatch { text-align: center; }
+  .swatch .chip { width: 72px; height: 72px; border-radius: 6px; margin-bottom: 10px; }
+  .swatch .hex { font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+  .swatch .name { font-size: 12px; margin-top: 2px; }
+
+  .fonts-row { display: flex; gap: 48px; flex-wrap: wrap; margin-bottom: 64px; font-size: 14px; }
+  .fonts-row .k { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
+
+  .preview-row { display: flex; gap: 40px; flex-wrap: wrap; align-items: flex-start; }
+
+  .monogram { width: 120px; height: 120px; border-radius: 999px; display: flex; align-items: center; justify-content: center; font-size: 36px; flex-shrink: 0; }
+
+  .card { width: 340px; height: 194px; border-radius: 8px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; flex-shrink: 0; }
+  .card .card-name { font-size: 19px; font-weight: 500; }
+  .card .card-role { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 4px; }
+  .card .card-contact { font-size: 12px; font-family: 'JetBrains Mono', monospace; }
+
+  .exploratory-note { font-size: 12px; margin-top: 24px; opacity: 0.65; }
+
+  /* Direction A — Continuité */
+  .dirA { background: #F6F3EC; color: #1C1A17; }
+  .dirA .tag, .dirA .k { color: #1B3A5C; }
+  .dirA .name, .dirA .mood { color: #6E6759; }
+  .dirA .subline { color: #47423A; }
+  .dirA .headline, .dirA .card-name { font-family: 'Spectral', serif; }
+  .dirA .monogram { background: #1B3A5C; color: #F6F3EC; font-family: 'Spectral', serif; }
+  .dirA .card { background: #1C1A17; color: #F6F3EC; }
+  .dirA .card-role, .dirA .card-contact { color: #C9C2AF; }
+
+  /* Direction B — Ardoise */
+  .dirB { background: #14171B; color: #EDEAE2; }
+  .dirB .tag, .dirB .k { color: #6FAE93; }
+  .dirB .name, .dirB .mood { color: #8A9199; }
+  .dirB .subline { color: #C7C2B6; }
+  .dirB .headline, .dirB .card-name { font-family: 'Space Grotesk', sans-serif; }
+  .dirB .monogram { background: #3F7A63; color: #EDEAE2; font-family: 'Space Grotesk', sans-serif; }
+  .dirB .card { background: #1D2226; color: #EDEAE2; border: 1px solid #2B3238; }
+  .dirB .card-role { color: #6FAE93; }
+  .dirB .card-contact { color: #8A9199; }
+  .dirB body, .dirB .fonts-row, .dirB p { font-family: 'IBM Plex Sans', sans-serif; }
+
+  /* Direction C — Atelier */
+  .dirC { background: #FBF6EE; color: #2B211A; }
+  .dirC .tag, .dirC .k { color: #B5502C; }
+  .dirC .name, .dirC .mood { color: #8A7A68; }
+  .dirC .subline { color: #4A3B2E; }
+  .dirC .headline, .dirC .card-name { font-family: 'Fraunces', serif; }
+  .dirC .monogram { background: #B5502C; color: #FBF6EE; font-family: 'Fraunces', serif; }
+  .dirC .card { background: #2B211A; color: #FBF6EE; }
+  .dirC .card-role { color: #D98457; }
+  .dirC .card-contact { color: #C9BCA8; }
+
+  .footer-note { max-width: 860px; margin: 0 auto; padding: 0 40px 96px; text-align: center; font-size: 13px; color: #8a8578; }
+</style>
+</head>
+<body>
+
+<div class="intro">
+  <div class="kicker">Charte graphique — exploration</div>
+  <h1>Thomas Jankowski</h1>
+  <p>Trois directions pour ton identité visuelle de freelance : une qui prolonge exactement le portfolio, deux nouvelles pistes à explorer. Chaque bloc montre la palette en situation (fond, texte, accent), les typographies associées, et un aperçu très schématique (monogramme + mini carte de visite) — pas encore un logo final, juste de quoi ressentir l'ambiance.</p>
+</div>
+
+<section class="direction dirA">
+  <div class="direction-inner">
+    <div class="label-row">
+      <div class="tag">Direction A — Continuité</div>
+      <div class="name">Identique au portfolio</div>
+    </div>
+    <div class="headline">Thomas Jankowski</div>
+    <div class="subline">Développeur Fullstack Freelance</div>
+    <div class="mood">Premium, épuré, éditorial. Confiance immédiate. Cohérence totale avec le site déjà en ligne — un client qui passe du portfolio à la carte de visite reconnaît la même main.</div>
+
+    <div class="swatches">
+      <div class="swatch"><div class="chip" style="background:#F6F3EC; border:1px solid #E2DCCC;"></div><div class="hex">#F6F3EC</div><div class="name">Ivoire (fond)</div></div>
+      <div class="swatch"><div class="chip" style="background:#1C1A17;"></div><div class="hex">#1C1A17</div><div class="name">Encre (texte)</div></div>
+      <div class="swatch"><div class="chip" style="background:#1B3A5C;"></div><div class="hex">#1B3A5C</div><div class="name">Bleu encre (accent)</div></div>
+      <div class="swatch"><div class="chip" style="background:#12283F;"></div><div class="hex">#12283F</div><div class="name">Accent foncé</div></div>
+      <div class="swatch"><div class="chip" style="background:#6E6759;"></div><div class="hex">#6E6759</div><div class="name">Pierre</div></div>
+      <div class="swatch"><div class="chip" style="background:#E2DCCC;"></div><div class="hex">#E2DCCC</div><div class="name">Ligne</div></div>
+    </div>
+
+    <div class="fonts-row">
+      <div><div class="k">Titres</div>Spectral</div>
+      <div><div class="k">Texte courant</div>Work Sans</div>
+    </div>
+
+    <div class="preview-row">
+      <div class="monogram">TJ</div>
+      <div class="card">
+        <div>
+          <div class="card-name">Thomas Jankowski</div>
+          <div class="card-role">Développeur Fullstack Freelance</div>
+        </div>
+        <div class="card-contact">thomas.jankowski.dev@gmail.com</div>
+      </div>
+    </div>
+    <div class="exploratory-note">Aperçu exploratoire — pas un logo final.</div>
+  </div>
+</section>
+
+<section class="direction dirB">
+  <div class="direction-inner">
+    <div class="label-row">
+      <div class="tag">Direction B — Ardoise</div>
+      <div class="name">Dark tech premium</div>
+    </div>
+    <div class="headline">Thomas Jankowski</div>
+    <div class="subline">Développeur Fullstack Freelance</div>
+    <div class="mood">Confiant, technique, feel produit SaaS/fintech premium. Le fond sombre et l'accent sauge mettent en avant la spécialisation blockchain sans être criards. Le monospace en petite touche fait un clin d'œil discret au code / à la blockchain.</div>
+
+    <div class="swatches">
+      <div class="swatch"><div class="chip" style="background:#14171B;"></div><div class="hex">#14171B</div><div class="name">Ardoise (fond)</div></div>
+      <div class="swatch"><div class="chip" style="background:#EDEAE2;"></div><div class="hex">#EDEAE2</div><div class="name">Ivoire cassé (texte)</div></div>
+      <div class="swatch"><div class="chip" style="background:#3F7A63;"></div><div class="hex">#3F7A63</div><div class="name">Sauge (accent)</div></div>
+      <div class="swatch"><div class="chip" style="background:#6FAE93;"></div><div class="hex">#6FAE93</div><div class="name">Sauge clair</div></div>
+      <div class="swatch"><div class="chip" style="background:#8A9199;"></div><div class="hex">#8A9199</div><div class="name">Gris moyen</div></div>
+      <div class="swatch"><div class="chip" style="background:#2B3238;"></div><div class="hex">#2B3238</div><div class="name">Ligne</div></div>
+    </div>
+
+    <div class="fonts-row">
+      <div><div class="k">Titres</div>Space Grotesk</div>
+      <div><div class="k">Texte courant</div>IBM Plex Sans</div>
+      <div><div class="k">Accents / tags</div>JetBrains Mono</div>
+    </div>
+
+    <div class="preview-row">
+      <div class="monogram">TJ</div>
+      <div class="card">
+        <div>
+          <div class="card-name">Thomas Jankowski</div>
+          <div class="card-role">FULLSTACK · WEB3</div>
+        </div>
+        <div class="card-contact">thomas.jankowski.dev@gmail.com</div>
+      </div>
+    </div>
+    <div class="exploratory-note">Aperçu exploratoire — pas un logo final.</div>
+  </div>
+</section>
+
+<section class="direction dirC">
+  <div class="direction-inner">
+    <div class="label-row">
+      <div class="tag">Direction C — Atelier</div>
+      <div class="name">Warm editorial</div>
+    </div>
+    <div class="headline">Thomas Jankowski</div>
+    <div class="subline">Développeur Fullstack Freelance</div>
+    <div class="mood">Chaleureux, humain, artisanal — se démarque des portfolios "SaaS froid" et montre le côté entrepreneur passionné. Le terracotta et le serif à caractère (Fraunces) donnent une personnalité plus affirmée que la direction A.</div>
+
+    <div class="swatches">
+      <div class="swatch"><div class="chip" style="background:#FBF6EE; border:1px solid #E7DCC9;"></div><div class="hex">#FBF6EE</div><div class="name">Blanc chaud (fond)</div></div>
+      <div class="swatch"><div class="chip" style="background:#2B211A;"></div><div class="hex">#2B211A</div><div class="name">Encre chaude (texte)</div></div>
+      <div class="swatch"><div class="chip" style="background:#B5502C;"></div><div class="hex">#B5502C</div><div class="name">Terracotta (accent)</div></div>
+      <div class="swatch"><div class="chip" style="background:#D98457;"></div><div class="hex">#D98457</div><div class="name">Terracotta clair</div></div>
+      <div class="swatch"><div class="chip" style="background:#8A7A68;"></div><div class="hex">#8A7A68</div><div class="name">Pierre chaude</div></div>
+      <div class="swatch"><div class="chip" style="background:#E7DCC9;"></div><div class="hex">#E7DCC9</div><div class="name">Ligne</div></div>
+    </div>
+
+    <div class="fonts-row">
+      <div><div class="k">Titres</div>Fraunces</div>
+      <div><div class="k">Texte courant</div>Work Sans</div>
+      <div><div class="k">Accents / tags</div>JetBrains Mono</div>
+    </div>
+
+    <div class="preview-row">
+      <div class="monogram">TJ</div>
+      <div class="card">
+        <div>
+          <div class="card-name">Thomas Jankowski</div>
+          <div class="card-role">DÉVELOPPEUR FULLSTACK FREELANCE</div>
+        </div>
+        <div class="card-contact">thomas.jankowski.dev@gmail.com</div>
+      </div>
+    </div>
+    <div class="exploratory-note">Aperçu exploratoire — pas un logo final.</div>
+  </div>
+</section>
+
+<div class="footer-note">Dis-moi quelle direction (ou quel mélange) te parle le plus — on affinera ensuite le logo, la carte de visite et le reste des supports sur cette base.</div>
+
+</body>
+</html>

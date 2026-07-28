@@ -18,10 +18,10 @@ const Contact = () => {
           {t('contactSection.rate')}
         </p>
         <a
-          href="mailto:thomas78125@gmail.com"
+          href="mailto:thomas.jankowski.dev@gmail.com"
           className="mb-8 inline-block rounded-sm bg-ivory px-8 py-4 text-[15px] font-medium text-ink transition-opacity hover:opacity-90 hover:text-ink hover:no-underline md:mb-10 md:px-10 md:py-[18px] md:text-[17px]"
         >
-          thomas78125@gmail.com
+          thomas.jankowski.dev@gmail.com
         </a>
         <div className="flex justify-center gap-8">
           <a href="https://linkedin.com/in/thomas-jankowski-b3483a216" target="_blank" rel="noreferrer" className="text-sm text-sand hover:text-ivory">
