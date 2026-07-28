@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { LanguageSwitcher } from './ui/LanguageSwitcher';
+import { Logo } from './ui/Logo';
 
 const Nav = () => {
   const { t } = useLanguage();
@@ -9,7 +10,11 @@ const Nav = () => {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-ivory/92 backdrop-blur-sm">
       <div className="mx-auto flex h-16 max-w-[1312px] items-center justify-between px-5 md:h-[84px] md:px-12">
-        <Link href="/" className="font-serif text-lg font-semibold tracking-tight md:text-xl">
+        <Link
+          href="/"
+          className="flex items-center gap-2.5 font-serif text-lg font-semibold tracking-tight hover:no-underline md:gap-3 md:text-xl"
+        >
+          <Logo className="h-8 w-8 shrink-0 md:h-9 md:w-9" />
           <span className="md:hidden">T. Jankowski</span>
           <span className="hidden md:inline">Thomas Jankowski</span>
         </Link>

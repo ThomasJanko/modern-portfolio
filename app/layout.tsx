@@ -18,10 +18,27 @@ const workSans = Work_Sans({
   display: "swap",
 });
 
+const title = "Thomas Jankowski — Développeur Fullstack Freelance";
+const description =
+  "Développeur Fullstack Freelance | React, Next.js, TypeScript, React Native, Node.js — disponible immédiatement pour vos projets web et mobile.";
+
 export const metadata: Metadata = {
-  title: "Thomas Jankowski — Développeur Fullstack Freelance",
-  description:
-    "Développeur Fullstack Freelance | React, Next.js, TypeScript, React Native, Node.js — disponible immédiatement pour vos projets web et mobile.",
+  metadataBase: new URL("https://thomas-jan.fr"),
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: "https://thomas-jan.fr",
+    siteName: "Thomas Jankowski",
+    locale: "fr_FR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function RootLayout({
