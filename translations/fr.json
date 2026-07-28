@@ -30,7 +30,9 @@
     "title": "Projets phares",
     "count": "06 sélectionnés",
     "viewProject": "Voir le projet",
-    "viewAll": "Voir tous les projets"
+    "viewAll": "Voir tous les projets",
+    "closeLightbox": "Fermer",
+    "viewLargerImage": "Agrandir l'image"
   },
   "allProjectsPage": {
     "title": "Tous les projets",

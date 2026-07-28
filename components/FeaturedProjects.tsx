@@ -1,12 +1,35 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { projects, reactNativeProjects, featuredProjectKeys } from '@/data';
 import { useLanguage } from '@/contexts/LanguageContext';
 
+type LightboxImage = {
+  src: (typeof projects)[number]['img'];
+  alt: string;
+};
+
 const FeaturedProjects = () => {
   const { t } = useLanguage();
+  const [lightbox, setLightbox] = useState<LightboxImage | null>(null);
+
+  useEffect(() => {
+    if (!lightbox) return;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setLightbox(null);
+    };
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', onKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', onKeyDown);
+    };
+  }, [lightbox]);
 
   const featured = featuredProjectKeys
     .map((key) => projects.find((project) => project.key === key))
@@ -42,17 +65,27 @@ const FeaturedProjects = () => {
                 }`}
               >
                 <div className={reversed ? 'md:order-2' : ''}>
-                  <div className="aspect-[4/3] w-full overflow-hidden rounded-sm shadow-[0_24px_48px_-24px_rgba(28,26,23,0.25)]">
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setLightbox({
+                        src: project.img,
+                        alt: t(`projectsData.${key}.title`),
+                      })
+                    }
+                    aria-label={t('projectsSection.viewLargerImage')}
+                    className="aspect-[4/3] w-full cursor-zoom-in overflow-hidden rounded-sm shadow-[0_24px_48px_-24px_rgba(28,26,23,0.25)] transition-opacity hover:opacity-95"
+                  >
                     <Image
                       src={project.img}
-                      alt={t(`projectsData.${key}.title`)}
+                      alt=""
                       width={880}
                       height={660}
                       className="h-full w-full object-cover"
                       sizes="(max-width: 768px) 100vw, 440px"
                       priority={index === 0}
                     />
-                  </div>
+                  </button>
                 </div>
 
                 <div className={reversed ? 'md:order-1' : ''}>
@@ -116,6 +149,38 @@ const FeaturedProjects = () => {
           </Link>
         </div>
       </div>
+
+      {lightbox && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-ink/85 p-4 md:p-10"
+          role="dialog"
+          aria-modal="true"
+          aria-label={lightbox.alt}
+          onClick={() => setLightbox(null)}
+        >
+          <button
+            type="button"
+            onClick={() => setLightbox(null)}
+            aria-label={t('projectsSection.closeLightbox')}
+            className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-sm text-2xl text-ivory/90 transition-colors hover:text-ivory md:right-8 md:top-8"
+          >
+            ×
+          </button>
+          <div
+            className="relative max-h-[min(90vh,900px)] w-full max-w-[min(100%,1120px)]"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <Image
+              src={lightbox.src}
+              alt={lightbox.alt}
+              width={1760}
+              height={1320}
+              className="mx-auto h-auto max-h-[min(90vh,900px)] w-full object-contain"
+              sizes="100vw"
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 };

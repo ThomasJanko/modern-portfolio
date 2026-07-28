@@ -30,7 +30,9 @@
     "title": "Featured projects",
     "count": "06 selected",
     "viewProject": "View project",
-    "viewAll": "View all projects"
+    "viewAll": "View all projects",
+    "closeLightbox": "Close",
+    "viewLargerImage": "View larger image"
   },
   "allProjectsPage": {
     "title": "All projects",
