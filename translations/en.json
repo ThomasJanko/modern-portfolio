@@ -9,6 +9,9 @@
     "contact": "Contact",
     "cta": "Get in touch"
   },
+  "theme": {
+    "toggle": "Toggle light / dark theme"
+  },
   "hero": {
     "eyebrow": "Freelance Fullstack Developer",
     "titleStart": "Rare fullstack versatility — ",

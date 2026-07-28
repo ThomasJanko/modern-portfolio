@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Spectral, Work_Sans } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/contexts/LanguageContext";
+import { ThemeProvider } from "@/contexts/ThemeContext";
+import { ThemeScript } from "@/components/ThemeScript";
 
 const spectral = Spectral({
   subsets: ["latin"],
@@ -47,9 +49,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${spectral.variable} ${workSans.variable}`}>
+    <html lang="fr" className={`${spectral.variable} ${workSans.variable}`} suppressHydrationWarning>
       <body className="font-sans bg-ivory text-ink antialiased">
-        <LanguageProvider>{children}</LanguageProvider>
+        <ThemeScript />
+        <ThemeProvider>
+          <LanguageProvider>{children}</LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

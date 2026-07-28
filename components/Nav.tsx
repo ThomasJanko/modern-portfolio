@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { LanguageSwitcher } from './ui/LanguageSwitcher';
+import { ThemeToggle } from './ui/ThemeToggle';
 import { Logo } from './ui/Logo';
 
 const Nav = () => {
@@ -27,6 +28,7 @@ const Nav = () => {
             <a href="/#contact">{t('nav.contact')}</a>
           </nav>
 
+          <ThemeToggle />
           <LanguageSwitcher />
 
           <a

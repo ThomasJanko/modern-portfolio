@@ -3,6 +3,32 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --color-ivory: 246 243 236;
+    --color-ink: 28 26 23;
+    --color-accent: 27 58 92;
+    --color-accent-dark: 18 40 63;
+    --color-stone: 110 103 89;
+    --color-clay: 71 66 58;
+    --color-line: 226 220 204;
+    --color-sand: 201 194 175;
+    --color-footer-bg: 28 26 23;
+    --color-overlay: 28 26 23;
+  }
+
+  .dark {
+    --color-ivory: 20 23 27;
+    --color-ink: 237 234 226;
+    --color-accent: 107 159 212;
+    --color-accent-dark: 139 183 230;
+    --color-stone: 138 145 153;
+    --color-clay: 199 194 182;
+    --color-line: 43 50 56;
+    --color-sand: 154 149 144;
+    --color-footer-bg: 13 15 18;
+    --color-overlay: 0 0 0;
+  }
+
   * {
     @apply scroll-smooth;
   }
