@@ -1,5 +1,9 @@
 'use client';
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, useMemo } from 'react';
+import fr from '@/translations/fr.json';
+import en from '@/translations/en.json';
+
+const translationsMap = { fr, en } as const;
 
 type Language = 'en' | 'fr';
 
@@ -13,7 +17,6 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguageState] = useState<Language>('en');
-  const [translations, setTranslations] = useState<Record<string, any>>({});
 
   useEffect(() => {
     // Load language from localStorage or default to 'en'
@@ -23,17 +26,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
-  useEffect(() => {
-    // Load translations based on current language
-    import(`@/translations/${language}.json`)
-      .then((mod) => {
-        setTranslations(mod.default);
-      })
-      .catch((err) => {
-        console.error('Failed to load translations:', err);
-        setTranslations({});
-      });
-  }, [language]);
+  const translations = useMemo(() => translationsMap[language], [language]);
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
@@ -43,7 +36,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const t = (key: string): any => {
     const keys = key.split('.');
     let value: any = translations;
-    
+
     for (const k of keys) {
       if (value && typeof value === 'object' && k in value) {
         value = value[k];
@@ -51,7 +44,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
         return key; // Return key if translation not found
       }
     }
-    
+
     return value !== undefined ? value : key;
   };
 
@@ -69,4 +62,3 @@ export function useLanguage() {
   }
   return context;
 }
-
