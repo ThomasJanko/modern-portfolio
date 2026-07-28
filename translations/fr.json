@@ -2,16 +2,73 @@
   "nav": {
     "about": "À propos",
     "projects": "Projets",
+    "stack": "Stack",
+    "experience": "Expérience",
     "technologies": "Technologies",
     "experiences": "Expériences",
-    "contact": "Contact"
+    "contact": "Contact",
+    "cta": "Me contacter"
   },
   "hero": {
-    "subtitle": "Magie Web Dynamique avec Next.JS",
-    "title": "Transformer les Concepts en Expériences Utilisateur Fluides",
-    "description": "Salut, je suis Thomas Jankowski, un Développeur Fullstack | TypeScript • Next.js • TailwindCSS • React Native",
+    "eyebrow": "Développeur Fullstack Freelance",
+    "titleStart": "Une polyvalence fullstack rare — ",
+    "titleAccent": "du produit au code",
+    "titleEnd": ", sans compromis.",
+    "description": "React, Next.js et TypeScript au cœur, applications mobiles, API backend et notions blockchain en plus — 4 ans et 9 mois d'expérience terrain, dont des missions livrées en production réelle. Disponible immédiatement.",
     "location": "Paris, France",
-    "showWork": "Voir mon travail"
+    "showWork": "Voir mon travail",
+    "ctaPrimary": "Discutons de votre projet",
+    "ctaSecondary": "Voir les projets"
+  },
+  "positioning": {
+    "title": "Positionnement",
+    "paragraph1": "Je conçois et je livre des produits web et mobile de bout en bout — de l'architecture technique à l'interface finale — pour des startups qui doivent avancer vite, des PME qui ont besoin d'un partenaire fiable dans la durée, et des agences qui cherchent un renfort autonome capable de s'intégrer sans friction.",
+    "paragraph2": "Ma force n'est pas de maîtriser un seul framework à la perfection, mais de couvrir l'ensemble de la chaîne : interfaces React et Next.js, applications mobiles React Native, API Node.js et NestJS, jusqu'aux bases du développement blockchain — une compétence rare chez les développeurs fullstack généralistes, acquise via une formation dédiée et mise en pratique sur des projets concrets (dApp de staking, interactions on-chain).",
+    "paragraph3": "Cette polyvalence n'est pas un argument marketing : c'est ce qui me permet de prendre en charge un projet dans son intégralité, de poser une architecture saine dès le départ, et d'éviter les allers-retours coûteux entre plusieurs prestataires spécialisés."
+  },
+  "projectsSection": {
+    "title": "Projets phares",
+    "count": "06 sélectionnés",
+    "viewProject": "Voir le projet",
+    "viewAll": "Voir tous les projets"
+  },
+  "allProjectsPage": {
+    "title": "Tous les projets",
+    "subtitle": "14 projets menés du web au mobile, jusqu'aux premières applications décentralisées.",
+    "resources": "Ressources"
+  },
+  "stackSection": {
+    "title": "Stack technique",
+    "levels": {
+      "core": "Cœur de compétences",
+      "advanced": "Avancé",
+      "intermediate": "Moyen",
+      "junior": "Junior"
+    },
+    "blockchain": {
+      "title": "Web3 · Différenciant",
+      "description": "Formation développeur blockchain de 3 mois — smart contracts Solidity, dApps et interactions on-chain, une compétence rare chez les développeurs fullstack généralistes."
+    }
+  },
+  "experiencesSection": {
+    "title": "Expériences professionnelles",
+    "filters": {
+      "all": "Tous",
+      "stage": "Stage",
+      "alternance": "Alternance — 3 ans",
+      "cdi": "CDI — 1 an 9 mois",
+      "formation": "Formation — 3 mois"
+    },
+    "today": {
+      "label": "Aujourd'hui",
+      "title": "Développeur fullstack freelance",
+      "description": "Lancement de l'activité indépendante — disponible immédiatement pour de nouvelles missions."
+    }
+  },
+  "contactSection": {
+    "available": "Disponible immédiatement",
+    "title": "Un projet à concrétiser ? Parlons-en, sans engagement.",
+    "rate": "TJM indicatif : 250 – 400 € / jour, selon le périmètre de la mission."
   },
   "grid": {
     "clientCollaboration": "Je privilégie la collaboration avec les clients, en favorisant une communication ouverte",
@@ -70,23 +127,21 @@
       "oldestFirst": "Plus ancien d'abord"
     }
   },
-  "approach": {
-    "title": "Mon",
-    "approach": "approche",
-    "phase": "Phase"
-  },
   "footer": {
     "title": "Prêt à faire passer",
     "your": "votre",
     "digitalPresence": "présence numérique au niveau supérieur ?",
     "description": "Contactez-moi dès aujourd'hui et discutons de la façon dont je peux vous aider à atteindre vos objectifs.",
     "getInTouch": "Me contacter",
-    "copyright": "Copyright © 2024 Thomas. Tous droits réservés."
+    "copyright": "© 2026 Thomas Jankowski",
+    "role": "Développeur Fullstack Freelance"
   },
   "projectsData": {
     "smoldAI": {
       "title": "SmoldAI - SaaS IA",
-      "description": "Application intégrant plusieurs Intelligences Artificielles. Capacité à générer du texte, du code, des images, de la musique et des vidéos. Connexion avec OAuth, traitement des paiements Stripe, gestion des utilisateurs, gestion des commandes et gestion des abonnements..."
+      "description": "SaaS multi-IA avec authentification, paiements Stripe et gestion complète des abonnements.",
+      "tag": "SaaS · IA & paiements",
+      "highlight": "Preuve de compétence SaaS de bout en bout : auth, paiement, IA."
     },
     "spotify": {
       "title": "Spotify Clone - Lecteur de Musique",
@@ -101,8 +156,10 @@
       "description": "Application de transfert de cryptomonnaies. Permet la création de compte, l'authentification, la visualisation du solde, les transferts d'argent, la visualisation de l'historique des transactions et l'envoi de messages dans une transaction..."
     },
     "gFormation": {
-      "title": "G-Formation - Plateforme de Formation",
-      "description": "Mise en place d'une interface web interconnectée dans le but d'offrir des formations relatives à l'ERP GESTIMUM."
+      "title": "G-Formation",
+      "description": "Plateforme de formation développée et déployée en production pour une entreprise réelle, avec intégration Microsoft Teams / Graph API.",
+      "tag": "Plateforme métier · Production",
+      "highlight": "Utilisée quotidiennement par les équipes internes de l'entreprise cliente."
     },
     "revochat": {
       "title": "Revochat - Application de Chat",
@@ -117,20 +174,27 @@
       "description": "Reproduction du site de streaming Netflix. Utilisation de Next.js et de l'API opensource themoviedb. Création d'une page d'authentification et de services de récupération de films..."
     },
     "sportizer": {
-      "title": "Sportizer - Tableau de Score de Basketball",
-      "description": "Application de tableau de score de basketball dynamique et ergonomique pour remplacer les anciens tableaux de score dans les salles de sport. Création d'une interface 'télécommande' et d'une interface 'écran' pour contrôler toutes les variables du match..."
+      "title": "Sportizer",
+      "description": "Tableau de score de basketball avec double interface : une télécommande pour l'opérateur, un écran synchronisé pour le public.",
+      "tag": "Web · Produit & UX",
+      "highlight": "Pensé comme un vrai produit à deux interfaces, pas comme un simple compteur."
     },
     "stocksapp": {
-      "title": "Stocks-App - Marché en Temps Réel",
-      "description": "Plateforme de marché boursier en temps réel avec alertes, graphiques TradingView et fonctionnalités IA (Next.js, MongoDB, TypeScript, Tailwind CSS, IA)."
+      "title": "Stocks-App",
+      "description": "Plateforme boursière temps réel avec graphiques avancés TradingView et analyse de marchés assistée par IA.",
+      "tag": "Web · Temps réel"
     },
     "weddinghat": {
-      "title": "Wedding-Hat - SaaS d'Organisation de Mariage",
-      "description": "SaaS d'organisation de mariage tout-en-un avec RSVP boosté par une IA MCP: WeddingGPT peut faire du CRUD directement dans l'application. Inclut site de mariage, organisation, gestion des rôles, plan de table, cartes de placement, playlists, gestion invités/prestataires et budgets."
+      "title": "Wedding-Hat",
+      "description": "SaaS d'organisation de mariage tout-en-un, assisté par une IA de recommandation — budget, prestataires, invités, planning, réunis dans un seul outil.",
+      "tag": "SaaS · Produit complet",
+      "highlight": "Le produit le plus abouti du portfolio, de la conception fonctionnelle au déploiement."
     },
     "stakingdapp": {
-      "title": "Staking DApp - Token KZN",
-      "description": "dApp de staking du token KZN avec connexion wallet, flux de staking et interactions on-chain via Wagmi, Solidity (Sepolia), Next.js, Tailwind CSS, Shadcn UI et vues personnalisées."
+      "title": "Staking DApp",
+      "description": "Application décentralisée de staking : connexion wallet, dépôt, calcul de rendement et interactions on-chain.",
+      "tag": "Web3 · Différenciant",
+      "highlight": "Preuve concrète de la compétence blockchain qui distingue ce profil."
     },
     "instagram": {
       "title": "Instagram Clone - Réseau Social",
@@ -144,76 +208,5 @@
       "title": "Marketplace NFT - Blockchain",
       "description": "Marketplace NFT. Permet aux utilisateurs de voir les NFT et de placer des enchères sur eux."
     }
-  },
-  "experiencesData": {
-    "vueDev": {
-      "title": "Développeur Vue JS",
-      "points": [
-        "Stage pour DUT, premier stage en développement web.",
-        "Auto-formation de deux semaines sur Vue JS, Vuetify et Laravel.",
-        "Collaboration avec un stagiaire développeur backend pour créer une plateforme web afin de remplacer le processus d'organisation de formation de l'entreprise.",
-        "Participation à la création du projet (maquette, base de données, etc.)."
-      ]
-    },
-    "reactDev": {
-      "title": "Développeur React JS",
-      "points": [
-        "Projet Ydays (école) dans une startup avec 3 personnes.",
-        "Collaboration avec 3 équipes de 4-5 personnes (marketing, design 3D et IT).",
-        "Conception d'une application de tableau de score de basketball dynamique et ergonomique pour remplacer les anciens tableaux de score dans les salles de sport.",
-        "Création d'une interface 'télécommande' et d'une interface 'écran' pour contrôler toutes les variables du match.",
-        "Utilisation d'un serveur socket.io pour minimiser le délai de transmission entre la télécommande et l'affichage.",
-        "Voir PDF ->"
-      ]
-    },
-    "fullstack1": {
-      "title": "Développeur Fullstack",
-      "points": [
-        "Reprise du développement de la plateforme G-Formation.",
-        "Collaboration avec 2 nouveaux stagiaires.",
-        "Mise en place d'emails automatiques (Mailtrap) et début des tests au sein de l'entreprise.",
-        "Mise en place d'un serveur pour héberger la première version de production interne de la plateforme."
-      ]
-    },
-    "frontendDev": {
-      "title": "Développeur Frontend",
-      "points": [
-        "Développement d'une application de messagerie instantanée Web3 en React JS.",
-        "Projet Ydays (école) avec une équipe de 7 développeurs.",
-        "Utilisation de la technologie Web3.0 pour créer l'une des premières applications de chat sur la Blockchain, garantissant son immutabilité.",
-        "Déploiement de l'application en utilisant des Smart Contracts."
-      ]
-    },
-    "fullstack2": {
-      "title": "Développeur Fullstack",
-      "points": [
-        "Reprise du développement de la plateforme G-Formation avec les mêmes stagiaires.",
-        "Mise en place d'un serveur SMTP pour envoyer des emails aux clients.",
-        "Test de la plateforme avec tous les services de l'entreprise pour identifier les problèmes potentiels et les familiariser avec la plateforme.",
-        "Mise en place d'un planificateur de tâches avec Laravel pour l'exécution automatique de certaines fonctionnalités du site.",
-        "Ouverture de la plateforme à l'externe pour organiser de vraies sessions de formation avec les clients et partenaires de Gestimum.",
-        "Création d'un site de pré-production pour continuer les tests et ajouter de nouvelles fonctionnalités.",
-        "Mise à jour et maintenance de la plateforme G-Formation.",
-        "Développement d'une application de gestion de tickets interne (G-Tickets) avec intégrations (Teams / Graph API) pour faciliter et accélérer le traitement interne.",
-        "Refonte de l'espace privé Gestimum (Espace Client) avec de nouvelles technologies (Vue.js / Express.js) et déploiement de la nouvelle version.",
-        "Développement d'une API pour interfacer entre Gestimum et une entreprise externe (Kaze) pour faciliter les interventions techniques pour les clients de Gestimum.",
-        "Déploiement de l'espace privé, G-Ticket et l'API d'interfaçage avec Docker sur un serveur Ubuntu."
-      ]
-    }
-  },
-  "approachData": {
-    "planning": {
-      "title": "Planification & Stratégie",
-      "description": "L'une des phases les plus importantes du projet est la phase de planification et de stratégie. C'est là que nous définissons la portée du projet, les objectifs et les exigences."
-    },
-    "design": {
-      "title": "Design & Développement",
-      "description": "Une fois la phase de planification et de stratégie terminée, nous passons à la phase de design et de développement. C'est là que nous créons le design visuel et développons le projet."
-    },
-    "testing": {
-      "title": "Tests & Déploiement",
-      "description": "Après la phase de design et de développement terminée, nous passons à la phase de tests et de déploiement. C'est là que nous testons le projet pour nous assurer qu'il répond aux exigences et le déployons dans l'environnement de production."
-    }
   }
 }
-

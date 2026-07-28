@@ -1,109 +1,41 @@
 'use client';
-import React from 'react'
-import { Spotlight } from './ui/Spotlight'
-import { TextGenerateEffect } from './ui/TextGenerateEffect'
-import ShimmerButton from './ui/ShimmerButton'
-import { FaArrowRight, FaMapLocation } from 'react-icons/fa6'
-import Image from 'next/image'
-import { useLanguage } from '@/contexts/LanguageContext'
-import { type PortfolioCategory } from './RecentProjects'
-import { FaMapPin } from 'react-icons/fa';
-import { Tilt } from 'react-tilt';
+import React from 'react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
-type HeroProps = {
-  activeCategory: PortfolioCategory;
+const Hero = () => {
+  const { t } = useLanguage();
+
+  return (
+    <section className="px-5 pb-16 pt-14 md:px-12 md:pb-32 md:pt-24 lg:pb-36 lg:pt-32">
+      <div className="mx-auto max-w-[1120px]">
+        <p className="mb-6 text-xs uppercase tracking-[0.14em] text-stone md:mb-7 md:text-sm">
+          {t('hero.eyebrow')}
+        </p>
+        <h1 className="mb-6 max-w-4xl font-serif text-[34px] font-medium leading-[1.15] tracking-tight md:mb-10 md:text-[58px] lg:text-[68px] lg:leading-[1.08]">
+          {t('hero.titleStart')}
+          <em className="italic text-accent">{t('hero.titleAccent')}</em>
+          {t('hero.titleEnd')}
+        </h1>
+        <p className="mb-8 max-w-xl text-base leading-relaxed text-clay md:mb-12 md:text-lg md:leading-[1.7]">
+          {t('hero.description')}
+        </p>
+        <div className="flex flex-col gap-3 sm:flex-row">
+          <a
+            href="mailto:thomas78125@gmail.com"
+            className="rounded-sm bg-accent px-7 py-4 text-center text-[15px] font-medium text-ivory transition-colors hover:bg-accent-dark hover:text-ivory hover:no-underline md:px-8 md:text-base"
+          >
+            {t('hero.ctaPrimary')}
+          </a>
+          <a
+            href="#projets"
+            className="rounded-sm border border-sand px-7 py-4 text-center text-[15px] text-ink transition-colors hover:bg-ink hover:text-ivory hover:no-underline md:px-8 md:text-base"
+          >
+            {t('hero.ctaSecondary')}
+          </a>
+        </div>
+      </div>
+    </section>
+  );
 };
 
-const Hero = ({ activeCategory }: HeroProps) => {
-  const { t, language } = useLanguage();
-
-  const cvAssetsByCategory = {
-    web3: {
-      fr: {
-        image: '/CV/JANKOWSKI_THOMAS_CV_2026_blockchain.png',
-        pdf: '/CV/JANKOWSKI_THOMAS_CV_2026_blockchain.pdf',
-      },
-      en: {
-        image: '/CV/JANKOWSKI_THOMAS_CV_2026_blockchain_en.png',
-        pdf: '/CV/JANKOWSKI_THOMAS_CV_2026_blockchain_en.pdf',
-      },
-    },
-    default: {
-      fr: {
-        image: '/CV/JANKOWSKI_THOMAS_CV_2026_fullstack.png',
-        pdf: '/CV/JANKOWSKI_THOMAS_CV_2026_fullstack.pdf',
-      },
-      en: {
-        image: '/CV/JANKOWSKI_THOMAS_CV_fullstack_en.png',
-        pdf: '/CV/JANKOWSKI_THOMAS_CV_fullstack_en.pdf',
-      },
-    },
-  } as const;
-
-  const languageKey = language === 'fr' ? 'fr' : 'en';
-  const categoryKey = activeCategory === 'web3' ? 'web3' : 'default';
-  const cvAsset = cvAssetsByCategory[categoryKey][languageKey];
-  
-  return (
-    <div className='pb-20 pt-36'>
-
-        <div className=''>
-            <Spotlight className='-top-40 -left-10 md:-left-32 md:-top-20 h-screen' fill='white'/>
-            <Spotlight className='top-10 left-full h-[80vh] w-[50vw]' fill='white'/>
-            <Spotlight className='top-28 left-80 h-[80vh] w-[50vw]' fill='blue'/>
-        </div>
-
-        <div className="h-screen w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black/[0.2] flex items-center justify-center absolute top-0 left-0">
-          <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
-        </div>
-        <div className='flex justify-center relative my-20 z-10'>
-          <div className='max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center'>
-            <h2 className='uppercase tracking-widest text-xs text-center text-blue-100 max-w-80'>{t('hero.subtitle')}</h2>
-            <TextGenerateEffect
-              className='text-center text-[40px] md:text-5xl lg:text-6xl'
-              words={t('hero.title')}
-            />
-            <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>
-              {t('hero.description')}
-            </p>
-            <div className='flex items-center justify-center gap-3 mb-4'>
-              <FaMapLocation size={20} color='white'  />
-              <p className='text-center md:tracking-wider  text-sm md:text-lg lg:text-2xl'>
-                {t('hero.location')}
-              </p>
-            </div>
-            <div className='flex justify-center my-4'>
-              <div className='w-full h-full relative'>
-                <Tilt
-                  className='w-full h-full relative'
-                >
-                <Image
-                  src={cvAsset.image}
-                  alt='CV'
-                  width={500}
-                  height={500}
-                  sizes="(max-width: 768px) 85vw, 500px"
-                  quality={75}
-                  className='rounded-md cursor-pointer'
-                  onClick={() => window.open(encodeURI(cvAsset.pdf), '_blank')}
-                />
-                </Tilt>
-              </div>
-            </div>
-            <a href="#about">
-              <ShimmerButton 
-                title={t('hero.showWork')}
-                icon={<FaArrowRight />}
-                position='right'
-              />
-            </a>
-           
-          </div>
-
-          
-        </div>
-    </div>
-  )
-}
-
-export default Hero
+export default Hero;

@@ -2,16 +2,73 @@
   "nav": {
     "about": "About",
     "projects": "Projects",
+    "stack": "Stack",
+    "experience": "Experience",
     "technologies": "Technologies",
     "experiences": "Experiences",
-    "contact": "Contact"
+    "contact": "Contact",
+    "cta": "Get in touch"
   },
   "hero": {
-    "subtitle": "Dynamic Web Magic with Next.JS",
-    "title": "Transforming Concepts into Seamless User Experiences",
-    "description": "Hi I'm Thomas Jankowski, a Fullstack Developer | TypeScript • Next.js • TailwindCSS • React Native",
+    "eyebrow": "Freelance Fullstack Developer",
+    "titleStart": "Rare fullstack versatility — ",
+    "titleAccent": "from product to code",
+    "titleEnd": ", without compromise.",
+    "description": "React, Next.js and TypeScript at the core, mobile apps, backend APIs and blockchain fundamentals on top — 4 years and 9 months of hands-on experience, including missions shipped to real production. Available immediately.",
     "location": "Paris, France",
-    "showWork": "Show my Work"
+    "showWork": "Show my Work",
+    "ctaPrimary": "Let's discuss your project",
+    "ctaSecondary": "View projects"
+  },
+  "positioning": {
+    "title": "Positioning",
+    "paragraph1": "I design and ship web and mobile products end to end — from technical architecture to the final interface — for startups that need to move fast, SMEs that need a reliable long-term partner, and agencies looking for an autonomous developer who can plug in without friction.",
+    "paragraph2": "My strength isn't mastering a single framework to perfection, but covering the entire chain: React and Next.js interfaces, React Native mobile apps, Node.js and NestJS APIs, all the way to blockchain development fundamentals — a rare skill among generalist fullstack developers, acquired through dedicated training and applied on real projects (staking dApp, on-chain interactions).",
+    "paragraph3": "This versatility isn't a marketing claim: it's what lets me take full ownership of a project, set up a sound architecture from day one, and avoid the costly back-and-forth between several specialized providers."
+  },
+  "projectsSection": {
+    "title": "Featured projects",
+    "count": "06 selected",
+    "viewProject": "View project",
+    "viewAll": "View all projects"
+  },
+  "allProjectsPage": {
+    "title": "All projects",
+    "subtitle": "14 projects spanning web, mobile, and early decentralized applications.",
+    "resources": "Resources"
+  },
+  "stackSection": {
+    "title": "Tech stack",
+    "levels": {
+      "core": "Core skills",
+      "advanced": "Advanced",
+      "intermediate": "Intermediate",
+      "junior": "Junior"
+    },
+    "blockchain": {
+      "title": "Web3 · Differentiator",
+      "description": "3-month blockchain developer training — Solidity smart contracts, dApps and on-chain interactions, a rare skill among generalist fullstack developers."
+    }
+  },
+  "experiencesSection": {
+    "title": "Professional experience",
+    "filters": {
+      "all": "All",
+      "stage": "Internship",
+      "alternance": "Apprenticeship — 3 years",
+      "cdi": "Permanent contract — 1 year 9 months",
+      "formation": "Certification — 3 months"
+    },
+    "today": {
+      "label": "Today",
+      "title": "Freelance fullstack developer",
+      "description": "Launching independent practice — available immediately for new missions."
+    }
+  },
+  "contactSection": {
+    "available": "Available immediately",
+    "title": "Have a project in mind? Let's talk, no strings attached.",
+    "rate": "Indicative day rate: €250 – €400 / day, depending on project scope."
   },
   "grid": {
     "clientCollaboration": "I prioritize client collaboration, fostering open communication",
@@ -70,23 +127,21 @@
       "oldestFirst": "Oldest first"
     }
   },
-  "approach": {
-    "title": "My",
-    "approach": "approach",
-    "phase": "Phase"
-  },
   "footer": {
     "title": "Ready to take",
     "your": "your",
     "digitalPresence": "digital presence to the next level?",
     "description": "Reach out to me today and let's discuss how I can help you achieve your goals.",
     "getInTouch": "Get in touch",
-    "copyright": "Copyright © 2024 Thomas. All rights reserved."
+    "copyright": "© 2026 Thomas Jankowski",
+    "role": "Freelance Fullstack Developer"
   },
   "projectsData": {
     "smoldAI": {
-      "title": "SmoldAI - AI SasS",
-      "description": "Application integrating multiple Artificial Intelligences. Capability to generate text, code, images, music, and videos. Connect with OAuth, Stripe payment processing, user management, order management, and subscription management..."
+      "title": "SmoldAI - AI SaaS",
+      "description": "Multi-AI SaaS with authentication, Stripe payments, and full subscription management.",
+      "tag": "SaaS · AI & payments",
+      "highlight": "End-to-end SaaS proof of skill: auth, payments, AI."
     },
     "spotify": {
       "title": "Spotify Clone - Music Player",
@@ -101,8 +156,10 @@
       "description": "Cryptocurrency transfer application. Allows account creation, authentication, balance viewing, money transfers, transaction history viewing, and sending messages within a transaction..."
     },
     "gFormation": {
-      "title": "G-Formation - Training Platform",
-      "description": "Implementation of an interconnected web interface with the aim of offering training relating to the GESTIMUM ERP."
+      "title": "G-Formation",
+      "description": "Training platform built and deployed to production for a real company, with Microsoft Teams / Graph API integration.",
+      "tag": "Business platform · Production",
+      "highlight": "Used daily by the client company's internal teams."
     },
     "revochat": {
       "title": "Revochat - Chat App",
@@ -117,20 +174,27 @@
       "description": "Reproduction of the Netflix streaming site. Use of Next.js and the opensource themoviedb api. Creation of an authentication page and movie retrieval services..."
     },
     "sportizer": {
-      "title": "Sportizer - Basketball Scoreboard",
-      "description": "Dynamic and ergonomic basketball scoreboard application to replace old scoreboards in gyms. Created a 'remote' interface and a 'screen' interface to control all match variables..."
+      "title": "Sportizer",
+      "description": "Basketball scoreboard with a dual interface: a remote control for the operator, a synced screen for the audience.",
+      "tag": "Web · Product & UX",
+      "highlight": "Designed as a real two-interface product, not a simple counter."
     },
     "stocksapp": {
-      "title": "Stocks-App - Real Time Market",
-      "description": "Real-time stocks market platform with alerts, TradingView charts, and AI features (Next.js, MongoDB, TypeScript, Tailwind CSS, AI)."
+      "title": "Stocks-App",
+      "description": "Real-time stock market platform with advanced TradingView charts and AI-assisted market analysis.",
+      "tag": "Web · Real-time"
     },
     "weddinghat": {
-      "title": "Wedding-Hat - Wedding Organization SaaS",
-      "description": "All-in-one wedding planning SaaS with RSVP boosted with MCP AI assistant: WeddingGPT can directly CRUD data in-app. Includes website builder, organization workflows, role management, table plan, seating cards, playlists, guest/vendor management, and budgets."
+      "title": "Wedding-Hat",
+      "description": "All-in-one wedding planning SaaS backed by an AI recommendation assistant — budget, vendors, guests, and planning brought together in one tool.",
+      "tag": "SaaS · Complete product",
+      "highlight": "The most complete product in the portfolio, from functional design to deployment."
     },
     "stakingdapp": {
-      "title": "Staking DApp - KZN Token",
-      "description": "Staking dApp for KZN token with wallet connection, staking flows, and on-chain interactions using Wagmi, Solidity (Sepolia), Next.js, Tailwind CSS, Shadcn UI, and custom views."
+      "title": "Staking DApp",
+      "description": "Decentralized staking application: wallet connection, deposits, yield calculation, and on-chain interactions.",
+      "tag": "Web3 · Differentiator",
+      "highlight": "Concrete proof of the blockchain skill that sets this profile apart."
     },
     "instagram": {
       "title": "Instagram Clone - Social Media",
@@ -144,76 +208,5 @@
       "title": "NFT Marketplace - Blockchain",
       "description": "NFT Marketplace. Allows users to see NFTs, and place bids on them."
     }
-  },
-  "experiencesData": {
-    "vueDev": {
-      "title": "Vue JS Developer",
-      "points": [
-        "Internship for DUT, first internship in web development.",
-        "Two-week self-training on Vue JS, Vuetify, and Laravel.",
-        "Collaborated with a backend developer intern to create a web platform to replace the company's training organization process.",
-        "Participated in the project creation (mockup, database, etc.)."
-      ]
-    },
-    "reactDev": {
-      "title": "React JS Developer",
-      "points": [
-        "Ydays project (school) in a startup with 3 people.",
-        "Collaborated with 3 teams of 4-5 people (marketing, 3D design, and IT).",
-        "Designed a dynamic and ergonomic basketball scoreboard application to replace old scoreboards in gyms.",
-        "Created a 'remote' interface and a 'screen' interface to control all match variables.",
-        "Used a socket.io server to minimize transmission delay between the remote and display.",
-        "See PDF ->"
-      ]
-    },
-    "fullstack1": {
-      "title": "Fullstack Developer",
-      "points": [
-        "Resumed development of the G-Formation platform.",
-        "Collaborated with 2 new interns.",
-        "Implemented automatic emails (Mailtrap) and began launching tests within the company.",
-        "Set up a server to host the first internal production version of the platform."
-      ]
-    },
-    "frontendDev": {
-      "title": "Frontend Developer",
-      "points": [
-        "Developed a Web3 instant messaging application in React JS.",
-        "Ydays project (school) with a team of 7 developers.",
-        "Used Web3.0 technology to create one of the first chat applications on the Blockchain, ensuring its immutability.",
-        "Deployed the application using Smart Contracts."
-      ]
-    },
-    "fullstack2": {
-      "title": "Fullstack Developer",
-      "points": [
-        "Resumed development of the G-Formation platform with the same interns.",
-        "Implemented an SMTP server to send emails to clients.",
-        "Tested the platform with all company services to identify potential issues and familiarize them with the platform.",
-        "Set up a task scheduler with Laravel for automatic execution of certain site features.",
-        "Opened the platform externally to organize real training sessions with Gestimum clients and partners.",
-        "Created a pre-production site to continue testing and adding new features.",
-        "Updated and maintained the G-Formation platform.",
-        "Developed an internal ticket management application (G-Tickets) with integrations (Teams / Graph API) to facilitate and speed up internal processing.",
-        "Redesigned the Gestimum private space (Client area) with new technologies (Vue.js / Express.js) and deployed the new version.",
-        "Developed an API to interface between Gestimum and an external company (Kaze) to facilitate technical interventions for Gestimum clients.",
-        "Deployed the private space, G-Ticket, and the interfacing API with Docker on an Ubuntu server."
-      ]
-    }
-  },
-  "approachData": {
-    "planning": {
-      "title": "Planning & Strategy",
-      "description": "One of the most important phases of the project is the planning and strategy phase. This is where we define the project scope, objectives, and requirements."
-    },
-    "design": {
-      "title": "Design & Development",
-      "description": "Once the planning and strategy phase is complete, we move on to the design and development phase. This is where we create the visual design and develop the project."
-    },
-    "testing": {
-      "title": "Testing & Deployment",
-      "description": "After the design and development phase is complete, we move on to the testing and deployment phase. This is where we test the project to ensure it meets the requirements and deploy it to the live environment."
-    }
   }
 }
-

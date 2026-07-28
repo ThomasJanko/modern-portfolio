@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import "./vertical-timeline.css";
-import { ThemeProvider } from "./provider";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: "Thomas JANKOWSKI",
-  description: "Fullstack Developer | TypeScript • Next.js • TailwindCSS • React Native",
+  title: "Thomas Jankowski — Développeur Fullstack Freelance",
+  description:
+    "Développeur Fullstack Freelance | React, Next.js, TypeScript, React Native, Node.js — disponible immédiatement pour vos projets web et mobile.",
 };
 
 export default function RootLayout({
@@ -18,19 +14,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-      <ThemeProvider
-        attribute="class"
-        defaultTheme="dark"
-        forcedTheme="dark"
-        enableSystem={false}
-        disableTransitionOnChange
-      >
-        <LanguageProvider>
-          {children}
-        </LanguageProvider>
-      </ThemeProvider>
+    <html lang="fr">
+      <body className="font-sans bg-ivory text-ink antialiased">
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );
