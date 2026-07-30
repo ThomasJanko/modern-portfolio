@@ -72,30 +72,28 @@ const FeaturedProjects = () => {
               >
                 <div className={reversed ? 'md:order-2' : ''}>
                   {isMobile ? (
-                    <div className="relative mx-auto w-fit">
-                      <PhoneFrame>
-                        <Carousel
-                          images={project.img}
-                          alt={projectTitle}
-                          priority={index === 0}
-                          onImageClick={(i) =>
-                            setLightbox({ src: project.img[i], alt: projectTitle })
-                          }
-                        />
-                      </PhoneFrame>
-                      {githubUrl && <GithubBadge href={githubUrl} />}
-                    </div>
+                    <PhoneFrame>
+                      <Carousel
+                        images={project.img}
+                        alt={projectTitle}
+                        priority={index === 0}
+                        autoPlay
+                        onImageClick={(i) =>
+                          setLightbox({ src: project.img[i], alt: projectTitle })
+                        }
+                      />
+                    </PhoneFrame>
                   ) : (
                     <div className="relative aspect-[4/3] w-full overflow-hidden rounded-sm shadow-[0_24px_48px_-24px_rgba(28,26,23,0.25)]">
                       <Carousel
                         images={project.img}
                         alt={projectTitle}
                         priority={index === 0}
+                        autoPlay
                         onImageClick={(i) =>
                           setLightbox({ src: project.img[i], alt: projectTitle })
                         }
                       />
-                      {githubUrl && <GithubBadge href={githubUrl} />}
                     </div>
                   )}
                 </div>
@@ -136,15 +134,20 @@ const FeaturedProjects = () => {
                     <p className="mb-6 text-[15px] font-medium text-accent">{highlight}</p>
                   )}
 
-                  {demoOrLink && (
-                    <a
-                      href={demoOrLink}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-[15px] font-medium"
-                    >
-                      {t('projectsSection.viewProject')} →
-                    </a>
+                  {(githubUrl || demoOrLink) && (
+                    <div className="flex items-center gap-3">
+                      {githubUrl && <GithubBadge href={githubUrl} />}
+                      {demoOrLink && (
+                        <a
+                          href={demoOrLink}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-[15px] font-medium"
+                        >
+                          {t('projectsSection.viewProject')} →
+                        </a>
+                      )}
+                    </div>
                   )}
                 </div>
               </div>

@@ -47,9 +47,29 @@ const config = {
           from: { opacity: "0", transform: "translateY(14px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
+        carouselInRight: {
+          from: { opacity: "0", transform: "translateX(12%)" },
+          to: { opacity: "1", transform: "translateX(0)" },
+        },
+        carouselInLeft: {
+          from: { opacity: "0", transform: "translateX(-12%)" },
+          to: { opacity: "1", transform: "translateX(0)" },
+        },
+        carouselOutLeft: {
+          from: { opacity: "1", transform: "translateX(0)" },
+          to: { opacity: "0", transform: "translateX(-12%)" },
+        },
+        carouselOutRight: {
+          from: { opacity: "1", transform: "translateX(0)" },
+          to: { opacity: "0", transform: "translateX(12%)" },
+        },
       },
       animation: {
         fadeUp: "fadeUp 0.6s ease-out both",
+        carouselInRight: "carouselInRight 0.5s cubic-bezier(0.22, 1, 0.36, 1) both",
+        carouselInLeft: "carouselInLeft 0.5s cubic-bezier(0.22, 1, 0.36, 1) both",
+        carouselOutLeft: "carouselOutLeft 0.5s cubic-bezier(0.22, 1, 0.36, 1) both",
+        carouselOutRight: "carouselOutRight 0.5s cubic-bezier(0.22, 1, 0.36, 1) both",
       },
     },
   },

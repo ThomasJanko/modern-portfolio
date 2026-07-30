@@ -96,16 +96,13 @@ export default function AllProjectsPage() {
               <div key={`${project.type}-${project.id}`}>
                 <div className="mb-4">
                   {isMobile ? (
-                    <div className="relative mx-auto w-fit">
-                      <PhoneFrame>
-                        <Carousel
-                          images={project.img}
-                          alt={title}
-                          onImageClick={(i) => setLightbox({ src: project.img[i], alt: title })}
-                        />
-                      </PhoneFrame>
-                      {githubUrl && <GithubBadge href={githubUrl} />}
-                    </div>
+                    <PhoneFrame>
+                      <Carousel
+                        images={project.img}
+                        alt={title}
+                        onImageClick={(i) => setLightbox({ src: project.img[i], alt: title })}
+                      />
+                    </PhoneFrame>
                   ) : (
                     <div className="relative aspect-[4/3] w-full overflow-hidden rounded-sm shadow-[0_12px_24px_-14px_rgba(28,26,23,0.25)]">
                       <Carousel
@@ -113,7 +110,6 @@ export default function AllProjectsPage() {
                         alt={title}
                         onImageClick={(i) => setLightbox({ src: project.img[i], alt: title })}
                       />
-                      {githubUrl && <GithubBadge href={githubUrl} />}
                     </div>
                   )}
                 </div>
@@ -126,15 +122,20 @@ export default function AllProjectsPage() {
                   {project.iconLists.map((tech) => tech.name).join(' · ')}
                 </p>
 
-                {demoOrLink && (
-                  <a
-                    href={demoOrLink}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-sm font-medium hover:no-underline"
-                  >
-                    {t('projectsSection.viewProject')} →
-                  </a>
+                {(githubUrl || demoOrLink) && (
+                  <div className="flex items-center gap-3">
+                    {githubUrl && <GithubBadge href={githubUrl} />}
+                    {demoOrLink && (
+                      <a
+                        href={demoOrLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-sm font-medium hover:no-underline"
+                      >
+                        {t('projectsSection.viewProject')} →
+                      </a>
+                    )}
+                  </div>
                 )}
               </div>
             );

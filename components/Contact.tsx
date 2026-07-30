@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { SocialLinks } from '@/components/ui/SocialLinks';
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -23,14 +24,7 @@ const Contact = () => {
         >
           thomas.jankowski.dev@gmail.com
         </a>
-        <div className="flex justify-center gap-8">
-          <a href="https://linkedin.com/in/thomas-jankowski-b3483a216" target="_blank" rel="noreferrer" className="text-sm text-sand hover:text-ivory">
-            LinkedIn
-          </a>
-          <a href="https://github.com/ThomasJanko" target="_blank" rel="noreferrer" className="text-sm text-sand hover:text-ivory">
-            GitHub
-          </a>
-        </div>
+        <SocialLinks className="justify-center gap-8 text-ivory" iconClassName="h-5 w-5" />
       </div>
     </section>
   );
