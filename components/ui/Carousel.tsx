@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi2';
+import { cn } from '@/utils/cn';
 
 type CarouselProps = {
   images: string[];
@@ -100,7 +101,7 @@ export function Carousel({
             src={src}
             alt={`${alt}${hasMultiple ? ` — ${i + 1}` : ''}`}
             fill
-            className="h-full w-full object-contain"
+            className={cn("h-full w-full", autoPlay ? "object-contain" : "object-cover")}
             sizes={sizes ?? '(max-width: 768px) 100vw, 440px'}
             priority={priority && i === 0}
           />
