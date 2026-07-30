@@ -39,7 +39,7 @@
   },
   "allProjectsPage": {
     "title": "Tous les projets",
-    "subtitle": "14 projets menés du web au mobile, jusqu'aux premières applications décentralisées.",
+    "subtitle": "17 projets menés du web au mobile, jusqu'aux premières applications décentralisées.",
     "resources": "Ressources"
   },
   "stackSection": {
@@ -212,6 +212,17 @@
     "nft": {
       "title": "Marketplace NFT - Blockchain",
       "description": "Marketplace NFT. Permet aux utilisateurs de voir les NFT et de placer des enchères sur eux."
+    },
+    "lalainaCreation": {
+      "title": "Lalaina Création - Boutique Cachemire",
+      "description": "Site vitrine et boutique en ligne pour un atelier de tricot artisanal (100% cachemire), avec back-office complet : gestion des stocks et alertes de réapprovisionnement, suivi des demandes sur-mesure, devis de retouche, promotions et génération d'étiquettes QR par produit.",
+      "tag": "Web · E-commerce & back-office",
+      "highlight": "Boutique + back-office métier complet livrés pour une cliente réelle."
+    },
+    "mbConseils": {
+      "title": "MB Conseils - Immobilier d'Entreprise",
+      "description": "Site vitrine pour une agence spécialisée en immobilier d'entreprise (bureaux, commerces, entrepôts) : catalogue de biens filtrable, estimation en ligne avec envoi de photos, et back-office de gestion des biens et des leads entrants.",
+      "tag": "Web · Vitrine & leads"
     }
   }
 }

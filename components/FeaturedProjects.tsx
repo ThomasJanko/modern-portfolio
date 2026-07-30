@@ -4,9 +4,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { projects, reactNativeProjects, featuredProjectKeys } from '@/data';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Carousel } from '@/components/ui/Carousel';
+import { GithubBadge } from '@/components/ui/GithubBadge';
+import { PhoneFrame } from '@/components/ui/PhoneFrame';
 
 type LightboxImage = {
-  src: (typeof projects)[number]['img'];
+  src: string;
   alt: string;
 };
 
@@ -54,8 +57,11 @@ const FeaturedProjects = () => {
             const key = project.key;
             const reversed = index % 2 === 1;
             const demoOrLink = project.demo || project.link;
+            const githubUrl = project.link && project.link.includes('github.com') ? project.link : null;
             const highlight = t(`projectsData.${key}.highlight`);
             const hasHighlight = highlight !== `projectsData.${key}.highlight`;
+            const projectTitle = t(`projectsData.${key}.title`);
+            const isMobile = project.type === 'mobile';
 
             return (
               <div
@@ -65,27 +71,33 @@ const FeaturedProjects = () => {
                 }`}
               >
                 <div className={reversed ? 'md:order-2' : ''}>
-                  <button
-                    type="button"
-                    onClick={() =>
-                      setLightbox({
-                        src: project.img,
-                        alt: t(`projectsData.${key}.title`),
-                      })
-                    }
-                    aria-label={t('projectsSection.viewLargerImage')}
-                    className="aspect-[4/3] w-full cursor-zoom-in overflow-hidden rounded-sm shadow-[0_24px_48px_-24px_rgba(28,26,23,0.25)] transition-opacity hover:opacity-95"
-                  >
-                    <Image
-                      src={project.img}
-                      alt=""
-                      width={880}
-                      height={660}
-                      className="h-full w-full object-cover"
-                      sizes="(max-width: 768px) 100vw, 440px"
-                      priority={index === 0}
-                    />
-                  </button>
+                  {isMobile ? (
+                    <div className="relative mx-auto w-fit">
+                      <PhoneFrame>
+                        <Carousel
+                          images={project.img}
+                          alt={projectTitle}
+                          priority={index === 0}
+                          onImageClick={(i) =>
+                            setLightbox({ src: project.img[i], alt: projectTitle })
+                          }
+                        />
+                      </PhoneFrame>
+                      {githubUrl && <GithubBadge href={githubUrl} />}
+                    </div>
+                  ) : (
+                    <div className="relative aspect-[4/3] w-full overflow-hidden rounded-sm shadow-[0_24px_48px_-24px_rgba(28,26,23,0.25)]">
+                      <Carousel
+                        images={project.img}
+                        alt={projectTitle}
+                        priority={index === 0}
+                        onImageClick={(i) =>
+                          setLightbox({ src: project.img[i], alt: projectTitle })
+                        }
+                      />
+                      {githubUrl && <GithubBadge href={githubUrl} />}
+                    </div>
+                  )}
                 </div>
 
                 <div className={reversed ? 'md:order-1' : ''}>

@@ -1,18 +1,22 @@
 'use client';
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { projects, reactNativeProjects, web3Resources } from '@/data';
 import { useLanguage } from '@/contexts/LanguageContext';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
+import { Carousel } from '@/components/ui/Carousel';
+import { GithubBadge } from '@/components/ui/GithubBadge';
+import { PhoneFrame } from '@/components/ui/PhoneFrame';
 
 type Category = 'all' | 'web' | 'mobile' | 'web3';
 
-const allEntries = [
-  ...projects.map((project) => ({ ...project, img: Array.isArray(project.img) ? project.img[0] : project.img })),
-  ...reactNativeProjects.map((project) => ({ ...project, img: Array.isArray(project.img) ? project.img[0] : project.img })),
-].sort((a, b) => {
+type LightboxImage = {
+  src: string;
+  alt: string;
+};
+
+const allEntries = [...projects, ...reactNativeProjects].sort((a, b) => {
   if (a.type !== b.type) return a.type === 'mobile' ? 1 : -1;
   return b.id - a.id;
 });
@@ -20,6 +24,24 @@ const allEntries = [
 export default function AllProjectsPage() {
   const { t } = useLanguage();
   const [filter, setFilter] = useState<Category>('all');
+  const [lightbox, setLightbox] = useState<LightboxImage | null>(null);
+
+  useEffect(() => {
+    if (!lightbox) return;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setLightbox(null);
+    };
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', onKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', onKeyDown);
+    };
+  }, [lightbox]);
 
   const categories: { id: Category; labelKey: string }[] = [
     { id: 'all', labelKey: 'projects.categories.all' },
@@ -63,42 +85,56 @@ export default function AllProjectsPage() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-x-10 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
           {visibleProjects.map((project) => {
             const demoOrLink = project.demo || project.link;
-            const card = (
-              <>
-                <div className="mb-4 aspect-[4/3] w-full overflow-hidden rounded-sm shadow-[0_12px_24px_-14px_rgba(28,26,23,0.25)]">
-                  <Image
-                    src={project.img}
-                    alt={t(`projectsData.${project.key}.title`)}
-                    width={600}
-                    height={450}
-                    className="h-full w-full object-cover"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                </div>
-                <p className="mb-2 text-xs uppercase tracking-[0.08em] text-stone">
-                  {t(`projects.categories.${project.category}`)}
-                </p>
-                <h3 className="mb-2 font-serif text-xl font-medium">
-                  {t(`projectsData.${project.key}.title`)}
-                </h3>
-                <p className="mb-2.5 text-[13px] text-stone">
-                  {project.iconLists.map((tech) => tech.name).join(' · ')}
-                </p>
-              </>
-            );
+            const githubUrl = project.link && project.link.includes('github.com') ? project.link : null;
+            const title = t(`projectsData.${project.key}.title`);
+            const isMobile = project.type === 'mobile';
 
             return (
               <div key={`${project.type}-${project.id}`}>
-                {demoOrLink ? (
-                  <a href={demoOrLink} target="_blank" rel="noreferrer" className="block hover:no-underline">
-                    {card}
-                    <span className="text-sm font-medium">{t('projectsSection.viewProject')} →</span>
+                <div className="mb-4">
+                  {isMobile ? (
+                    <div className="relative mx-auto w-fit">
+                      <PhoneFrame>
+                        <Carousel
+                          images={project.img}
+                          alt={title}
+                          onImageClick={(i) => setLightbox({ src: project.img[i], alt: title })}
+                        />
+                      </PhoneFrame>
+                      {githubUrl && <GithubBadge href={githubUrl} />}
+                    </div>
+                  ) : (
+                    <div className="relative aspect-[4/3] w-full overflow-hidden rounded-sm shadow-[0_12px_24px_-14px_rgba(28,26,23,0.25)]">
+                      <Carousel
+                        images={project.img}
+                        alt={title}
+                        onImageClick={(i) => setLightbox({ src: project.img[i], alt: title })}
+                      />
+                      {githubUrl && <GithubBadge href={githubUrl} />}
+                    </div>
+                  )}
+                </div>
+
+                <p className="mb-2 text-xs uppercase tracking-[0.08em] text-stone">
+                  {t(`projects.categories.${project.category}`)}
+                </p>
+                <h3 className="mb-2 font-serif text-xl font-medium">{title}</h3>
+                <p className="mb-2.5 text-[13px] text-stone">
+                  {project.iconLists.map((tech) => tech.name).join(' · ')}
+                </p>
+
+                {demoOrLink && (
+                  <a
+                    href={demoOrLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-sm font-medium hover:no-underline"
+                  >
+                    {t('projectsSection.viewProject')} →
                   </a>
-                ) : (
-                  <div>{card}</div>
                 )}
               </div>
             );
@@ -129,6 +165,38 @@ export default function AllProjectsPage() {
       </div>
 
       <Footer />
+
+      {lightbox && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-overlay/85 p-4 md:p-10"
+          role="dialog"
+          aria-modal="true"
+          aria-label={lightbox.alt}
+          onClick={() => setLightbox(null)}
+        >
+          <button
+            type="button"
+            onClick={() => setLightbox(null)}
+            aria-label={t('projectsSection.closeLightbox')}
+            className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-sm text-2xl text-ivory/90 transition-colors hover:text-ivory md:right-8 md:top-8"
+          >
+            ×
+          </button>
+          <div
+            className="relative max-h-[min(90vh,900px)] w-full max-w-[min(100%,1120px)]"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <Image
+              src={lightbox.src}
+              alt={lightbox.alt}
+              width={1760}
+              height={1320}
+              className="mx-auto h-auto max-h-[min(90vh,900px)] w-full object-contain"
+              sizes="100vw"
+            />
+          </div>
+        </div>
+      )}
     </main>
   );
 }

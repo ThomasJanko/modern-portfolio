@@ -6,7 +6,7 @@ export const projects = [
     type: "web",
     title: "SmoldAI - AI SasS",
     des: "Application integrating multiple Artificial Intelligences. Capability to generate text, code, images, music, and videos. Connect with OAuth, Stripe payment processing, user management, order management, and subscription management...",
-    img: "/images/smoldAI.png",
+    img: ["/images/smoldAI.png"],
     iconLists: [
       { name: "NextJs", icon: "/next.svg", link: "https://nextjs.org" },
       { name: "TailwindCSS", icon: "/tail.svg", link: "https://tailwindcss.com" },
@@ -24,7 +24,7 @@ export const projects = [
     type: "web",
     title: "Spotify Clone - Music Player",
     des: "Reproduction of the Spotify streaming site. Music upload via AWS S3, music converter to mp3, playlist creation, adding music to a playlist, music playback, music search, simultaneous listening via sockets...",
-    img: "/images/spotify.png",
+    img: ["/images/spotify.png"],
     iconLists: [
       { name: "NextJs", icon: "/next.svg", link: "https://nextjs.org" },
       { name: "TailwindCSS", icon: "/tail.svg", link: "https://tailwindcss.com" },
@@ -42,7 +42,7 @@ export const projects = [
     type: "web",
     title: "Imaginify - AI Image SaaS",
     des: "Images design using AI features and a payments and credits system using the latest tech stack.",
-    img: "/images/imaginify.png",
+    img: ["/images/imaginify.png"],
     iconLists: [
       { name: "ReactJs", icon: "/react.svg", link: "https://reactjs.org" },
       { name: "TailwindCSS", icon: "/tail.svg", link: "https://tailwindcss.com" },
@@ -61,7 +61,7 @@ export const projects = [
     type: "web",
     title: "Crypto-app - Blockchain Application",
     des: "Cryptocurrency transfer application. Allows account creation, authentication, balance viewing, money transfers, transaction history viewing, and sending messages within a transaction...",
-    img: "/images/crypto-app.png",
+    img: ["/images/crypto-app.png"],
     iconLists: [
       { name: "ReactJs", icon: "/react.svg", link: "https://reactjs.org" },
       { name: "TailwindCSS", icon: "/tail.svg", link: "https://tailwindcss.com" },
@@ -79,7 +79,11 @@ export const projects = [
     type: "web",
     title: "G-Formation - Training Platform",
     des: "Implementation of an interconnected web interface with the aim of offering training relating to the GESTIMUM ERP.",
-    img: "/images/g-formation.png",
+    img: [
+      "/images/g-formation.png",
+      "/images/g-formation-admin-1.png",
+      "/images/g-formation-admin-2.png",
+    ],
     iconLists: [
       { name: "VueJs", icon: "/vue.svg", link: "https://vuejs.org" },
       { name: "Vuetify", icon: "/vuetify.svg", link: "https://vuetifyjs.com" },
@@ -97,7 +101,7 @@ export const projects = [
     type: "web",
     title: "Revochat - Chat App",
     des: "Developed a Secure App Chat appllication, similar to discord.",
-    img: "/images/revochat.png",
+    img: ["/images/revochat.png"],
     iconLists: [
       { name: "ReactJs", icon: "/react.svg", link: "https://reactjs.org" },
       { name: "TailwindCSS", icon: "/tail.svg", link: "https://tailwindcss.com" },
@@ -115,7 +119,7 @@ export const projects = [
     type: "web",
     title: "AirBnb clone - Booking Platform",
     des: "Airbnb clone. Allows users to create an account, search for accommodation, book accommodation, view booking history, and manage their account...",
-    img: "/images/airbnb.png",
+    img: ["/images/airbnb.png"],
     iconLists: [
       { name: "NextJs", icon: "/next.svg", link: "https://nextjs.org" },
       { name: "ReactJs", icon: "/react.svg", link: "https://reactjs.org" },
@@ -132,7 +136,7 @@ export const projects = [
     type: "web",
     title: "Netflix clone - Streaming Platform",
     des: "Reproduction of the Netflix streaming site. Use of Next.js and the opensource themoviedb api. Creation of an authentication page and movie retrieval services...",
-    img: "/images/netflix.png",
+    img: ["/images/netflix.png"],
     iconLists: [
       { name: "NextJs", icon: "/next.svg", link: "https://nextjs.org" },
       { name: "ReactJs", icon: "/react.svg", link: "https://reactjs.org" },
@@ -149,7 +153,7 @@ export const projects = [
     type: "web",
     title: "Sportizer - Basketball Scoreboard",
     des: "Dynamic and ergonomic basketball scoreboard application to replace old scoreboards in gyms. Created a 'remote' interface and a 'screen' interface to control all match variables...",
-    img: "/images/sportizer.png",
+    img: ["/images/sportizer.png"],
     iconLists: [
       { name: "ReactJs", icon: "/react.svg", link: "https://reactjs.org" },
       { name: "Socket.io", icon: "/socket.svg", link: "https://socket.io" },
@@ -166,7 +170,7 @@ export const projects = [
     type: "web",
     title: "Stocks-App - Real Time Market",
     des: "Real-time stocks market platform with alerts, TradingView charts, and AI features (Next.js, MongoDB, TypeScript, Tailwind CSS, AI).",
-    img: "/images/stocks-app.png",
+    img: ["/images/stocks-app.png"],
     iconLists: [
       { name: "NextJs", icon: "/next.svg", link: "https://nextjs.org" },
       { name: "TypeScript", icon: "/ts.svg", link: "https://www.typescriptlang.org" },
@@ -184,7 +188,11 @@ export const projects = [
     type: "web",
     title: "Wedding-Hat - Wedding Organization SaaS",
     des: "All-in-one wedding planning SaaS with RSVP boosted with MCP AI assistant: WeddingGPT can directly CRUD data in-app. Includes website builder, organization workflows, role management, table plan, seating cards, playlists, guest/vendor management, and budgets.",
-    img: "/images/weddinghat-dashboard.png",
+    img: [
+      "/images/weddinghat-dashboard.png",
+      "/images/weddinghat-3.png",
+      "/images/weddinghat-2.png",
+    ],
     iconLists: [
       { name: "NextJs", icon: "/next.svg", link: "https://nextjs.org" },
       { name: "TypeScript", icon: "/ts.svg", link: "https://www.typescriptlang.org" },
@@ -202,7 +210,7 @@ export const projects = [
     type: "web",
     title: "Staking DApp - KZN Token",
     des: "Staking dApp for KZN token with wallet connection, staking flows, and on-chain interactions using Wagmi, Solidity (Sepolia), Next.js, Tailwind CSS, Shadcn UI, and custom views.",
-    img: "/images/staking.png",
+    img: ["/images/staking.png", "/images/staking-2.png"],
     iconLists: [
       { name: "NextJs", icon: "/next.svg", link: "https://nextjs.org" },
       { name: "Wagmi", icon: "/wagmi.avif", link: "https://wagmi.sh" },
@@ -213,6 +221,56 @@ export const projects = [
     ],
     link: "https://github.com/ThomasJanko-Blockchain/kzn-staking-dapp",
     demo: "https://staking-dapp.thomas-jan.fr",
+  },
+  {
+    id: 13,
+    key: "lalainaCreation",
+    category: "web",
+    type: "web",
+    title: "Lalaina Création - Boutique Cachemire",
+    des: "Showcase site and online boutique for a handmade cashmere knitwear atelier, with a full back-office: inventory management, low-stock alerts, custom-order (made-to-measure) tracking, quotes, promotions and QR label generation.",
+    img: [
+      "/images/lalaina-creation-1.png",
+      "/images/lalaina-creation-3.png",
+      "/images/lalaina-creation-4.png",
+      "/images/lalaina-creation-2.png",
+      "/images/lalaina-creation-5.png",
+      "/images/lalaina-creation-admin-1.png",
+      "/images/lalaina-creation-admin-3.png",
+      "/images/lalaina-creation-admin-4.png",
+      "/images/lalaina-creation-admin-5.png",
+      "/images/lalaina-creation-admin-2.png",
+    ],
+    iconLists: [
+      { name: "NextJs", icon: "/next.svg", link: "https://nextjs.org" },
+      { name: "TypeScript", icon: "/ts.svg", link: "https://www.typescriptlang.org" },
+      { name: "TailwindCSS", icon: "/tailwindcss.svg", link: "https://tailwindcss.com" },
+    ],
+    link: "",
+    demo: "",
+  },
+  {
+    id: 14,
+    key: "mbConseils",
+    category: "web",
+    type: "web",
+    title: "MB Conseils - Immobilier d'Entreprise",
+    des: "Showcase site for a commercial real estate agency (offices, retail, warehouses): filterable property catalogue, online estimation request with photo upload, and a back-office for managing listings and incoming leads.",
+    img: [
+      "/images/mb-conseils-1.png",
+      "/images/mb-conseils-2.png",
+      "/images/mb-conseils-3.png",
+      "/images/mb-conseils-admin-1.png",
+      "/images/mb-conseils-admin-2.png",
+      "/images/mb-conseils-admin-3.png",
+    ],
+    iconLists: [
+      { name: "NextJs", icon: "/next.svg", link: "https://nextjs.org" },
+      { name: "TypeScript", icon: "/ts.svg", link: "https://www.typescriptlang.org" },
+      { name: "TailwindCSS", icon: "/tailwindcss.svg", link: "https://tailwindcss.com" },
+    ],
+    link: "",
+    demo: "",
   },
 ];
 
@@ -270,6 +328,8 @@ export const reactNativeProjects = [
 
 // Les 6 projets mis en avant sur la page d'accueil, dans l'ordre d'affichage souhaité.
 export const featuredProjectKeys = [
+  "lalainaCreation",
+  "mbConseils",
   "weddinghat",
   "gFormation",
   "stocksapp",

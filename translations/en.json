@@ -39,7 +39,7 @@
   },
   "allProjectsPage": {
     "title": "All projects",
-    "subtitle": "14 projects spanning web, mobile, and early decentralized applications.",
+    "subtitle": "17 projects spanning web, mobile, and early decentralized applications.",
     "resources": "Resources"
   },
   "stackSection": {
@@ -212,6 +212,17 @@
     "nft": {
       "title": "NFT Marketplace - Blockchain",
       "description": "NFT Marketplace. Allows users to see NFTs, and place bids on them."
+    },
+    "lalainaCreation": {
+      "title": "Lalaina Création - Cashmere Boutique",
+      "description": "Showcase site and online boutique for a handmade cashmere knitwear atelier (100% cashmere), with a full back-office: stock management with low-stock alerts, custom-order tracking, alteration quotes, promotions, and per-product QR label generation.",
+      "tag": "Web · E-commerce & back-office",
+      "highlight": "Boutique + full business back-office shipped for a real client."
+    },
+    "mbConseils": {
+      "title": "MB Conseils - Commercial Real Estate",
+      "description": "Showcase site for a commercial real estate agency (offices, retail, warehouses): filterable property catalogue, online estimation request with photo upload, and a back-office for managing listings and incoming leads.",
+      "tag": "Web · Showcase & leads"
     }
   }
 }
